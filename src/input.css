@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS - Write your custom styles here */
+
+/* Custom component classes */
+@layer components {
+	.btn-primary {
+		@apply px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition;
+	}
+
+	.card {
+		@apply bg-white shadow-lg rounded-lg p-6;
+	}
+}
+
+/* Custom utility classes */
+@layer utilities {
+	.text-shadow {
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	}
+}
+
+/* Regular CSS (will be added after Tailwind) */
+.custom-animation {
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
