@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS - Write your custom styles here */
+/* Custom CSS Root Variables */
+:root {
+	--primary-color: #1e3a5f; /* Deep Navy - trust & professionalism */
+	--secondary-color: #2bb6a8; /* Vibrant Teal - modern, energetic vibes */
+	--accent-color: #f4b400; /* Golden Amber - optimism & highlights */
+}
 
 /* Custom component classes */
 @layer components {
@@ -21,6 +26,31 @@
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 	}
 }
+
+/* Custom Color Classes with !important */
+
+/* Background Colors */
+.bg-primary-color {
+	background-color: var(--primary-color) !important;
+}
+.bg-secondary-color {
+	background-color: var(--secondary-color) !important;
+}
+.bg-accent-color {
+	background-color: var(--accent-color) !important;
+}
+
+/* Text Colors */
+.text-primary-color {
+	color: var(--primary-color) !important;
+}
+.text-secondary-color {
+	color: var(--secondary-color) !important;
+}
+.text-accent-color {
+	color: var(--accent-color) !important;
+}
+
 
 /* Regular CSS (will be added after Tailwind) */
 .custom-animation {
