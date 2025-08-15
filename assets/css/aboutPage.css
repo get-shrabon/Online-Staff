@@ -1,0 +1,138 @@
+/* ========================== Banner Section CSS ========================== */
+.about-banner-section {
+	background: linear-gradient(
+		135deg,
+		#0f172a 0%,
+		#1e293b 25%,
+		#334155 50%,
+		#475569 75%,
+		#64748b 100%
+	);
+	background-size: 400% 400%;
+	position: relative;
+	overflow: hidden;
+}
+
+.about-banner-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(
+			circle at 20% 80%,
+			rgba(31, 162, 255, 0.1) 0%,
+			transparent 50%
+		),
+		radial-gradient(circle at 80% 20%, rgba(21, 111, 135, 0.15) 0%, transparent 50%);
+}
+
+.about-banner-section .hero-image {
+	position: relative;
+	border-radius: 2rem;
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+.about-banner-section .hero-image::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		135deg,
+		transparent 0%,
+		rgba(31, 162, 255, 0.1) 50%,
+		transparent 100%
+	);
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.about-banner-section .hero-image:hover::before {
+	opacity: 1;
+}
+
+.about-banner-section .floating-element {
+	backdrop-filter: blur(20px);
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	animation: float 6s ease-in-out infinite;
+}
+
+.about-banner-section .floating-element:nth-child(2) {
+	animation-delay: -2s;
+}
+
+.about-banner-section .floating-element:nth-child(3) {
+	animation-delay: -4s;
+}
+
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	33% {
+		transform: translateY(-10px) rotate(1deg);
+	}
+	66% {
+		transform: translateY(5px) rotate(-1deg);
+	}
+}
+
+.about-banner-section .glass-card {
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* ========================== Banner Section CSS ========================== */
+
+/* ========================== Story Section CSS ========================== */
+.about-story {
+	background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+.about-story .story-card {
+	backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-story .number-highlight {
+	background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+/* ========================== Story Section CSS ========================== */
+
+/* ========================== Mission Vision Section CSS ========================== */
+.about-mission-section {
+	background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+}
+
+.about-mission-section .mission-card {
+	background: rgba(255, 255, 255, 0.9);
+	backdrop-filter: blur(10px);
+	transition: all 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-mission-section .mission-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-mission-section .icon-wrapper {
+	background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+}
+
+.about-mission-section .value-item {
+	transition: all 0.2s ease;
+}
+
+.about-mission-section .value-item:hover {
+	transform: translateX(4px);
+}
+/* ========================== Mission Vision Section CSS ========================== */

@@ -1,0 +1,820 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Custom CSS Root Variables */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+}
+
+/* Fonts Classes */
+.font-poppins {
+	font-family: "Poppins", sans-serif;
+}
+
+.font-inter {
+	font-family: "Inter", sans-serif;
+}
+
+:root {
+	--primary-color: #0d2a4d; /* Deep Navy Blue */
+	--secondary-color: #156f87; /* Deep Teal */
+	--accent-color: #1fa2ff; /* Vibrant Sky Blue */
+}
+
+/* Background Colors */
+.bg-primary-color {
+	background-color: var(--primary-color);
+}
+.bg-secondary-color {
+	background-color: var(--secondary-color);
+}
+.bg-accent-color {
+	background-color: var(--accent-color);
+}
+
+/* Text Colors */
+.text-primary-color {
+	color: var(--primary-color);
+}
+.text-secondary-color {
+	color: var(--secondary-color);
+}
+.text-accent-color {
+	color: var(--accent-color);
+}
+
+/* Regular CSS (will be added after Tailwind) */
+.custom-animation {
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* ============================= Header CSS ============================= */
+.dropdown-content {
+	opacity: 0;
+	transform: translateY(10px);
+	transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+	opacity: 1;
+	transform: translateY(25px);
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+
+.mobile-menu.active {
+	max-height: 500px;
+}
+
+/* Sticky header shadow */
+.header-sticky {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* ============================= Header CSS ============================= */
+
+/* ============================= Home Banner CSS ============================= */
+.home-banner * {
+	font-family: "Inter", sans-serif;
+}
+
+.home-banner .hero-section {
+	background: linear-gradient(
+			135deg,
+			rgba(15, 23, 42, 0.95) 0%,
+			rgba(30, 41, 59, 0.9) 50%,
+			rgba(15, 23, 42, 0.95) 100%
+		),
+		url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+}
+
+.home-banner .hero-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(
+			circle at 20% 80%,
+			rgba(59, 130, 246, 0.15) 0%,
+			transparent 50%
+		),
+		radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.1) 0%, transparent 50%);
+	animation: pulse 8s ease-in-out infinite alternate;
+}
+
+.home-banner .glass-effect {
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.home-banner .text-gradient {
+	background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #ffffff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	background-size: 200% 200%;
+	animation: shimmer 4s ease-in-out infinite;
+}
+
+.home-banner .accent-gradient-text {
+	background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+.home-banner .accent-gradient {
+	background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+}
+
+.home-banner .floating-card {
+	animation: float 6s ease-in-out infinite;
+}
+
+.home-banner .floating-card:nth-child(2) {
+	animation-delay: -2s;
+}
+
+.home-banner .floating-card:nth-child(3) {
+	animation-delay: -4s;
+}
+
+.home-banner .btn-primary {
+	background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+	box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.4);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	position: relative;
+	overflow: hidden;
+}
+
+.home-banner .btn-primary::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.3),
+		transparent
+	);
+	transition: left 0.6s;
+}
+
+.home-banner .btn-primary:hover::before {
+	left: 100%;
+}
+
+.home-banner .btn-primary:hover {
+	transform: translateY(-3px) scale(1.05);
+	box-shadow: 0 30px 60px -12px rgba(59, 130, 246, 0.6);
+}
+
+.home-banner .btn-secondary {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	transition: all 0.3s ease;
+}
+
+.home-banner .btn-secondary:hover {
+	background: rgba(59, 130, 246, 0.2);
+	border-color: rgba(59, 130, 246, 0.5);
+	transform: translateY(-2px);
+}
+
+.home-banner .service-icon {
+	transition: all 0.3s ease;
+}
+
+.home-banner .service-icon:hover {
+	transform: scale(1.1) rotate(5deg);
+}
+
+.home-banner .stats-card {
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(20px);
+	animation: bounce 3s ease-in-out infinite;
+}
+
+.home-banner .stats-card:nth-child(2) {
+	animation-delay: 1s;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+
+	33% {
+		transform: translateY(-10px) rotate(1deg);
+	}
+
+	66% {
+		transform: translateY(-5px) rotate(-1deg);
+	}
+}
+
+@keyframes shimmer {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.home-banner .particle {
+	position: absolute;
+	background: rgba(59, 130, 246, 0.3);
+	border-radius: 50%;
+	animation: particle-float 15s linear infinite;
+}
+
+.home-banner .particle:nth-child(1) {
+	left: 10%;
+	animation-duration: 12s;
+	width: 4px;
+	height: 4px;
+}
+
+.home-banner .particle:nth-child(2) {
+	left: 20%;
+	animation-duration: 18s;
+	width: 6px;
+	height: 6px;
+	animation-delay: -2s;
+}
+
+.home-banner .particle:nth-child(3) {
+	left: 30%;
+	animation-duration: 14s;
+	width: 3px;
+	height: 3px;
+	animation-delay: -4s;
+}
+
+.home-banner .particle:nth-child(4) {
+	right: 10%;
+	animation-duration: 16s;
+	width: 5px;
+	height: 5px;
+	animation-delay: -6s;
+}
+
+.home-banner .particle:nth-child(5) {
+	right: 20%;
+	animation-duration: 13s;
+	width: 4px;
+	height: 4px;
+	animation-delay: -8s;
+}
+
+@keyframes particle-float {
+	0% {
+		transform: translateY(100vh) rotate(0deg);
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(-100px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.home-banner .hero-section {
+		background-attachment: scroll;
+	}
+}
+/* ============================= Home Banner CSS ============================= */
+
+/* ============================= Home Services Section CSS ============================= */
+
+.services-section .service-card {
+	transition: all 0.3s ease;
+}
+.services-section .service-card:hover {
+	box-shadow: 0 20px 40px rgba(13, 42, 77, 0.15);
+	transform: translateY(-5px);
+}
+.services-section .service-card:hover .service-icon {
+	color: var(--accent-color);
+	transform: scale(1.1);
+}
+.services-section .service-icon {
+	transition: all 0.3s ease;
+}
+/* ============================= Home Services Section CSS ============================= */
+
+/* ============================= Why Choose Section CSS ============================= */
+
+.why-choose-section .feature-card {
+	transition: all 0.3s ease;
+}
+.why-choose-section .feature-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 15px 30px rgba(13, 42, 77, 0.1);
+}
+.why-choose-section .trust-stat {
+	background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+}
+/* ============================= Why Choose Section CSS ============================= */
+
+/* ============================= Pricing Section CSS ============================= */
+.pricing-section .plan-card {
+	transition: all 0.4s ease;
+	position: relative;
+	/* overflow-x: hidden; */
+}
+
+.pricing-section .plan-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 25px 50px rgba(13, 42, 77, 0.2);
+}
+
+
+.pricing-section .plan-card:hover::before {
+	opacity: 1;
+}
+
+.pricing-section .popular-badge {
+	background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+	animation: pulse 2s infinite;
+}
+
+.pricing-section .popular-card {
+	transform: scale(1.05);
+	box-shadow: 0 20px 40px rgba(31, 162, 255, 0.15);
+	border: 2px solid var(--accent-color);
+}
+
+.pricing-section .popular-card::before {
+	opacity: 1;
+}
+
+.pricing-section .get-started-btn {
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.pricing-section .get-started-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px rgba(31, 162, 255, 0.3);
+}
+
+.pricing-section .get-started-btn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.2),
+		transparent
+	);
+	transition: left 0.5s;
+}
+
+.pricing-section .get-started-btn:hover::before {
+	left: 100%;
+}
+
+.pricing-section .feature-check {
+	color: var(--accent-color);
+	transition: transform 0.2s ease;
+}
+
+.pricing-section .plan-card:hover .feature-check {
+	transform: scale(1.1);
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.8;
+	}
+}
+
+/* Additional styles for toggle functionality */
+.savings-info {
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.plan-card .text-5xl {
+	transition: all 0.3s ease;
+}
+
+/* Toggle button styles */
+.toggle-btn-active {
+	background-color: #1fa2ff !important;
+	color: white !important;
+}
+
+.toggle-btn-inactive {
+	background-color: transparent !important;
+	color: #6b7280 !important;
+}
+
+/* Ensure toggle buttons override any other styles */
+#monthlyBtn.toggle-btn-active,
+#yearlyBtn.toggle-btn-active {
+	background-color: #1fa2ff !important;
+	color: white !important;
+}
+
+#monthlyBtn.toggle-btn-inactive,
+#yearlyBtn.toggle-btn-inactive {
+	background-color: transparent !important;
+	color: #6b7280 !important;
+}
+/* ============================= Pricing Section CSS ============================= */
+
+/* ============================= Portfolio Section CSS ============================= */
+.portfolio-section .project-card {
+	transition: all 0.4s ease;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.portfolio-section .project-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(13, 42, 77, 0.15);
+}
+.portfolio-section .project-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(135deg, rgba(13, 42, 77, 0.9), rgba(31, 162, 255, 0.8));
+	opacity: 0;
+	transition: all 0.4s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.portfolio-section .project-card:hover .project-overlay {
+	opacity: 1;
+}
+.portfolio-section .project-overlay-content {
+	transform: translateY(20px);
+	transition: transform 0.4s ease 0.1s;
+}
+.portfolio-section .project-card:hover .project-overlay-content {
+	transform: translateY(0);
+}
+.portfolio-section .filter-btn {
+	transition: all 0.3s ease;
+	position: relative;
+}
+.portfolio-section .filter-btn.active {
+	background-color: var(--accent-color) !important;
+	color: white !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(31, 162, 255, 0.3);
+}
+.portfolio-section .filter-btn:hover:not(.active) {
+	background-color: #f3f4f6;
+	transform: translateY(-1px);
+}
+.portfolio-section .project-category {
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.portfolio-section .project-image {
+	transition: transform 0.4s ease;
+}
+.portfolio-section .project-card:hover .project-image {
+	transform: scale(1.1);
+}
+/* ============================= Portfolio Section CSS ============================= */
+
+
+/* ============================= Testimonial Section CSS ============================= */
+.testimonial-section {
+            background-image:
+                linear-gradient(135deg, rgba(13, 42, 77, 0.95) 0%, rgba(21, 111, 135, 0.85) 50%, rgba(31, 162, 255, 0.75) 100%),
+                url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .testimonial-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(31, 162, 255, 0.1) 0%, rgba(13, 42, 77, 0.9) 70%);
+            z-index: 1;
+        }
+
+        .testimonial-section .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-section .testimonial-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            transform: translateY(0);
+        }
+
+        .testimonial-section .testimonial-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(31, 162, 255, 0.3);
+            box-shadow: 0 25px 50px rgba(31, 162, 255, 0.15);
+        }
+
+        .testimonial-section .quote-icon {
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .testimonial-section .profile-img {
+            border: 3px solid rgba(31, 162, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-section .testimonial-card:hover .profile-img {
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .testimonial-section .star-rating {
+            filter: drop-shadow(0 2px 4px rgba(31, 162, 255, 0.3));
+        }
+
+        .testimonial-section .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.4) !important;
+            width: 12px !important;
+            height: 12px !important;
+            transition: all 0.3s ease;
+            opacity: 1 !important;
+        }
+
+        .testimonial-section .swiper-pagination-bullet-active {
+            background: var(--accent-color) !important;
+            transform: scale(1.2);
+        }
+
+        .testimonial-section .swiper-button-next,
+        .testimonial-section .swiper-button-prev {
+            width: 50px !important;
+            height: 50px !important;
+            background: rgba(31, 162, 255, 0.1) !important;
+            border: 1px solid rgba(31, 162, 255, 0.3);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            margin-top: 0 !important;
+            z-index: 10 !important;
+        }
+
+        .testimonial-section .swiper-button-next:hover,
+        .testimonial-section .swiper-button-prev:hover {
+            background: rgba(31, 162, 255, 0.2) !important;
+            border-color: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .testimonial-section .swiper-button-next::after,
+        .testimonial-section .swiper-button-prev::after {
+            font-size: 20px !important;
+            color: var(--accent-color) !important;
+            font-weight: bold;
+        }
+
+        /* Fix pagination position */
+        .testimonial-section .swiper-pagination {
+            bottom: 10px !important;
+            z-index: 10 !important;
+        }
+
+        .testimonial-section .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .testimonial-section .floating-element {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(31, 162, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .testimonial-section .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .testimonial-section .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .testimonial-section .floating-element:nth-child(3) {
+            bottom: 30%;
+            left: 80%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-section {
+                background-attachment: scroll;
+            }
+
+            .testimonial-section .swiper-button-next,
+            .testimonial-section .swiper-button-prev {
+                display: none;
+            }
+        }
+/* ============================= Testimonial Section CSS ============================= */
+
+/* ============================= How It Works Section CSS ============================= */
+.home-process-section .timeline-line {
+	background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+}
+
+.home-process-section .process-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(13, 42, 77, 0.15);
+}
+
+.home-industry-section .industry-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 35px rgba(13, 42, 77, 0.12);
+}
+/* ============================= How It Works Section CSS ============================= */
+
+/* ============================= Blog Section CSS ============================= */
+.home-blog-section .blog-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(13, 42, 77, 0.15);
+}
+
+
+
+.home-blog-section .read-more:hover {
+	color: var(--accent-color);
+}
+/* ============================= Blog Section CSS ============================= */
+
+/* ============================= CTA Section CSS ============================= */
+.home-cta-section {
+	background-image: linear-gradient(rgba(13, 42, 77, 0.85), rgba(21, 111, 135, 0.85)),
+		url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.home-cta-section .cta-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px rgba(31, 162, 255, 0.4);
+}
+/* ============================= CTA Section CSS ============================= */
+
+/* ============================= Footer Section CSS ============================= */
+.online-staff-footer .bg-primary-color {
+	background-color: var(--primary-color) !important;
+}
+.online-staff-footer .bg-secondary-color {
+	background-color: var(--secondary-color) !important;
+}
+.online-staff-footer .bg-accent-color {
+	background-color: var(--accent-color) !important;
+}
+
+/* Text Colors */
+.online-staff-footer .text-primary-color {
+	color: var(--primary-color) !important;
+}
+.online-staff-footer .text-secondary-color {
+	color: var(--secondary-color) !important;
+}
+.online-staff-footer .text-accent-color {
+	color: var(--accent-color) !important;
+}
+
+.online-staff-footer .hover-accent:hover {
+	color: var(--accent-color) !important;
+}
+/* ============================= Footer Section CSS ============================= */
