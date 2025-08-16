@@ -88,6 +88,11 @@ body {
 	max-height: 500px;
 }
 
+.active-link {
+	background-color: var(--primary-color) !important;
+	color: white !important;
+}
+
 /* Sticky header shadow */
 .header-sticky {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -95,6 +100,7 @@ body {
 /* ============================= Header CSS ============================= */
 
 /* ============================= Home Banner CSS ============================= */
+
 .home-banner * {
 	font-family: "Inter", sans-serif;
 }
@@ -352,6 +358,343 @@ body {
 }
 /* ============================= Home Banner CSS ============================= */
 
+/* ============================= Home Banner Version 2 CSS ============================= */
+.home-banner2 * {
+	font-family: "Inter", sans-serif;
+}
+
+.home-banner2 .hero-section {
+	background: linear-gradient(
+			135deg,
+			rgba(13, 42, 77, 0.95) 0%,
+			rgba(21, 111, 135, 0.9) 50%,
+			rgba(13, 42, 77, 0.95) 100%
+		),
+		url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+}
+
+.home-banner2 .hero-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(
+			circle at 20% 80%,
+			rgba(31, 162, 255, 0.15) 0%,
+			transparent 50%
+		),
+		radial-gradient(circle at 80% 20%, rgba(21, 111, 135, 0.1) 0%, transparent 50%);
+	animation: pulse 8s ease-in-out infinite alternate;
+}
+
+.home-banner2 .glass-effect {
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.home-banner2 .form-glass-effect {
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(25px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	box-shadow: 0 30px 60px -12px rgba(13, 42, 77, 0.3),
+		inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.home-banner2 .text-gradient {
+	background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #ffffff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	background-size: 200% 200%;
+	animation: shimmer 4s ease-in-out infinite;
+}
+
+.home-banner2 .accent-gradient-text {
+	background: linear-gradient(
+		135deg,
+		var(--accent-color) 0%,
+		var(--secondary-color) 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+.home-banner2 .accent-gradient {
+	background: linear-gradient(
+		135deg,
+		var(--accent-color) 0%,
+		var(--secondary-color) 100%
+	);
+}
+
+.home-banner2 .primary-gradient {
+	background: linear-gradient(
+		135deg,
+		var(--primary-color) 0%,
+		var(--secondary-color) 100%
+	);
+}
+
+.home-banner2 .floating-card {
+	animation: float 6s ease-in-out infinite;
+}
+
+.home-banner2 .floating-card:nth-child(2) {
+	animation-delay: -2s;
+}
+
+.home-banner2 .floating-card:nth-child(3) {
+	animation-delay: -4s;
+}
+
+.home-banner2 .btn-primary {
+	background: linear-gradient(
+		135deg,
+		var(--accent-color) 0%,
+		var(--primary-color) 100%
+	);
+	box-shadow: 0 20px 40px -12px rgba(31, 162, 255, 0.4);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	position: relative;
+	overflow: hidden;
+}
+
+.home-banner2 .btn-primary::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.3),
+		transparent
+	);
+	transition: left 0.6s;
+}
+
+.home-banner2 .btn-primary:hover::before {
+	left: 100%;
+}
+
+.home-banner2 .btn-primary:hover {
+	transform: translateY(-3px) scale(1.05);
+	box-shadow: 0 30px 60px -12px rgba(31, 162, 255, 0.6);
+}
+
+.home-banner2 .btn-secondary {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	transition: all 0.3s ease;
+}
+
+.home-banner2 .btn-secondary:hover {
+	background: rgba(31, 162, 255, 0.2);
+	border-color: rgba(31, 162, 255, 0.5);
+	transform: translateY(-2px);
+}
+
+.home-banner2 .service-icon {
+	transition: all 0.3s ease;
+}
+
+.home-banner2 .service-icon:hover {
+	transform: scale(1.1) rotate(5deg);
+}
+
+.home-banner2 .form-input {
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.home-banner2 .form-input:focus {
+	background: rgba(255, 255, 255, 0.15);
+	border-color: var(--accent-color);
+	box-shadow: 0 0 0 3px rgba(31, 162, 255, 0.1);
+	outline: none;
+}
+
+.home-banner2 .form-input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.home-banner2 .form-select {
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.home-banner2 .form-select:focus {
+	background: rgba(255, 255, 255, 0.15);
+	border-color: var(--accent-color);
+	box-shadow: 0 0 0 3px rgba(31, 162, 255, 0.1);
+	outline: none;
+}
+
+.home-banner2 .form-select option {
+	background: var(--primary-color);
+	color: white;
+}
+
+.home-banner2 .form-textarea {
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	color: white;
+	resize: vertical;
+	min-height: 100px;
+	transition: all 0.3s ease;
+}
+
+.home-banner2 .form-textarea:focus {
+	background: rgba(255, 255, 255, 0.15);
+	border-color: var(--accent-color);
+	box-shadow: 0 0 0 3px rgba(31, 162, 255, 0.1);
+	outline: none;
+}
+
+.home-banner2 .form-textarea::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.home-banner2 .form-label {
+	color: white;
+	font-weight: 500;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.home-banner2 .required {
+	color: #ff6b6b;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+
+	33% {
+		transform: translateY(-10px) rotate(1deg);
+	}
+
+	66% {
+		transform: translateY(-5px) rotate(-1deg);
+	}
+}
+
+@keyframes shimmer {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.home-banner2 .particle {
+	position: absolute;
+	background: rgba(31, 162, 255, 0.3);
+	border-radius: 50%;
+	animation: particle-float 15s linear infinite;
+}
+
+.home-banner2 .particle:nth-child(1) {
+	left: 10%;
+	animation-duration: 12s;
+	width: 4px;
+	height: 4px;
+}
+
+.home-banner2 .particle:nth-child(2) {
+	left: 20%;
+	animation-duration: 18s;
+	width: 6px;
+	height: 6px;
+	animation-delay: -2s;
+}
+
+.home-banner2 .particle:nth-child(3) {
+	left: 30%;
+	animation-duration: 14s;
+	width: 3px;
+	height: 3px;
+	animation-delay: -4s;
+}
+
+.home-banner2 .particle:nth-child(4) {
+	right: 10%;
+	animation-duration: 16s;
+	width: 5px;
+	height: 5px;
+	animation-delay: -6s;
+}
+
+.home-banner2 .particle:nth-child(5) {
+	right: 20%;
+	animation-duration: 13s;
+	width: 4px;
+	height: 4px;
+	animation-delay: -8s;
+}
+
+@keyframes particle-float {
+	0% {
+		transform: translateY(100vh) rotate(0deg);
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(-100px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.home-banner2 .hero-section {
+		background-attachment: scroll;
+	}
+}
+/* ============================= Home Banner Version 2 CSS ============================= */
+
 /* ============================= Home Services Section CSS ============================= */
 
 .services-section .service-card {
@@ -395,7 +738,6 @@ body {
 	transform: translateY(-10px);
 	box-shadow: 0 25px 50px rgba(13, 42, 77, 0.2);
 }
-
 
 .pricing-section .plan-card:hover::before {
 	opacity: 1;
@@ -575,177 +917,183 @@ body {
 }
 /* ============================= Portfolio Section CSS ============================= */
 
-
 /* ============================= Testimonial Section CSS ============================= */
 .testimonial-section {
-            background-image:
-                linear-gradient(135deg, rgba(13, 42, 77, 0.95) 0%, rgba(21, 111, 135, 0.85) 50%, rgba(31, 162, 255, 0.75) 100%),
-                url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: relative;
-        }
+	background-image: linear-gradient(
+			135deg,
+			rgba(13, 42, 77, 0.95) 0%,
+			rgba(21, 111, 135, 0.85) 50%,
+			rgba(31, 162, 255, 0.75) 100%
+		),
+		url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+}
 
-        .testimonial-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(31, 162, 255, 0.1) 0%, rgba(13, 42, 77, 0.9) 70%);
-            z-index: 1;
-        }
+.testimonial-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(
+		circle at 50% 50%,
+		rgba(31, 162, 255, 0.1) 0%,
+		rgba(13, 42, 77, 0.9) 70%
+	);
+	z-index: 1;
+}
 
-        .testimonial-section .content-wrapper {
-            position: relative;
-            z-index: 2;
-        }
+.testimonial-section .content-wrapper {
+	position: relative;
+	z-index: 2;
+}
 
-        .testimonial-section .testimonial-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-            transform: translateY(0);
-        }
+.testimonial-section .testimonial-card {
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+	transform: translateY(0);
+}
 
-        .testimonial-section .testimonial-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(31, 162, 255, 0.3);
-            box-shadow: 0 25px 50px rgba(31, 162, 255, 0.15);
-        }
+.testimonial-section .testimonial-card:hover {
+	transform: translateY(-8px);
+	background: rgba(255, 255, 255, 0.12);
+	border-color: rgba(31, 162, 255, 0.3);
+	box-shadow: 0 25px 50px rgba(31, 162, 255, 0.15);
+}
 
-        .testimonial-section .quote-icon {
-            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+.testimonial-section .quote-icon {
+	background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
 
-        .testimonial-section .profile-img {
-            border: 3px solid rgba(31, 162, 255, 0.3);
-            transition: all 0.3s ease;
-        }
+.testimonial-section .profile-img {
+	border: 3px solid rgba(31, 162, 255, 0.3);
+	transition: all 0.3s ease;
+}
 
-        .testimonial-section .testimonial-card:hover .profile-img {
-            border-color: var(--accent-color);
-            transform: scale(1.05);
-        }
+.testimonial-section .testimonial-card:hover .profile-img {
+	border-color: var(--accent-color);
+	transform: scale(1.05);
+}
 
-        .testimonial-section .star-rating {
-            filter: drop-shadow(0 2px 4px rgba(31, 162, 255, 0.3));
-        }
+.testimonial-section .star-rating {
+	filter: drop-shadow(0 2px 4px rgba(31, 162, 255, 0.3));
+}
 
-        .testimonial-section .swiper-pagination-bullet {
-            background: rgba(255, 255, 255, 0.4) !important;
-            width: 12px !important;
-            height: 12px !important;
-            transition: all 0.3s ease;
-            opacity: 1 !important;
-        }
+.testimonial-section .swiper-pagination-bullet {
+	background: rgba(255, 255, 255, 0.4) !important;
+	width: 12px !important;
+	height: 12px !important;
+	transition: all 0.3s ease;
+	opacity: 1 !important;
+}
 
-        .testimonial-section .swiper-pagination-bullet-active {
-            background: var(--accent-color) !important;
-            transform: scale(1.2);
-        }
+.testimonial-section .swiper-pagination-bullet-active {
+	background: var(--accent-color) !important;
+	transform: scale(1.2);
+}
 
-        .testimonial-section .swiper-button-next,
-        .testimonial-section .swiper-button-prev {
-            width: 50px !important;
-            height: 50px !important;
-            background: rgba(31, 162, 255, 0.1) !important;
-            border: 1px solid rgba(31, 162, 255, 0.3);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            margin-top: 0 !important;
-            z-index: 10 !important;
-        }
+.testimonial-section .swiper-button-next,
+.testimonial-section .swiper-button-prev {
+	width: 50px !important;
+	height: 50px !important;
+	background: rgba(31, 162, 255, 0.1) !important;
+	border: 1px solid rgba(31, 162, 255, 0.3);
+	border-radius: 50%;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(10px);
+	margin-top: 0 !important;
+	z-index: 10 !important;
+}
 
-        .testimonial-section .swiper-button-next:hover,
-        .testimonial-section .swiper-button-prev:hover {
-            background: rgba(31, 162, 255, 0.2) !important;
-            border-color: var(--accent-color);
-            transform: scale(1.1);
-        }
+.testimonial-section .swiper-button-next:hover,
+.testimonial-section .swiper-button-prev:hover {
+	background: rgba(31, 162, 255, 0.2) !important;
+	border-color: var(--accent-color);
+	transform: scale(1.1);
+}
 
-        .testimonial-section .swiper-button-next::after,
-        .testimonial-section .swiper-button-prev::after {
-            font-size: 20px !important;
-            color: var(--accent-color) !important;
-            font-weight: bold;
-        }
+.testimonial-section .swiper-button-next::after,
+.testimonial-section .swiper-button-prev::after {
+	font-size: 20px !important;
+	color: var(--accent-color) !important;
+	font-weight: bold;
+}
 
-        /* Fix pagination position */
-        .testimonial-section .swiper-pagination {
-            bottom: 10px !important;
-            z-index: 10 !important;
-        }
+/* Fix pagination position */
+.testimonial-section .swiper-pagination {
+	bottom: 10px !important;
+	z-index: 10 !important;
+}
 
-        .testimonial-section .floating-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
-            z-index: 1;
-        }
+.testimonial-section .floating-elements {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 1;
+}
 
-        .testimonial-section .floating-element {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(31, 162, 255, 0.6);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
+.testimonial-section .floating-element {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	background: rgba(31, 162, 255, 0.6);
+	border-radius: 50%;
+	animation: float 6s ease-in-out infinite;
+}
 
-        .testimonial-section .floating-element:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
+.testimonial-section .floating-element:nth-child(1) {
+	top: 20%;
+	left: 10%;
+	animation-delay: 0s;
+}
 
-        .testimonial-section .floating-element:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
+.testimonial-section .floating-element:nth-child(2) {
+	top: 60%;
+	right: 15%;
+	animation-delay: 2s;
+}
 
-        .testimonial-section .floating-element:nth-child(3) {
-            bottom: 30%;
-            left: 80%;
-            animation-delay: 4s;
-        }
+.testimonial-section .floating-element:nth-child(3) {
+	bottom: 30%;
+	left: 80%;
+	animation-delay: 4s;
+}
 
-        @keyframes float {
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0) scale(1);
+		opacity: 0.6;
+	}
 
-            0%,
-            100% {
-                transform: translateY(0) scale(1);
-                opacity: 0.6;
-            }
+	50% {
+		transform: translateY(-20px) scale(1.2);
+		opacity: 1;
+	}
+}
 
-            50% {
-                transform: translateY(-20px) scale(1.2);
-                opacity: 1;
-            }
-        }
+@media (max-width: 768px) {
+	.testimonial-section {
+		background-attachment: scroll;
+	}
 
-        @media (max-width: 768px) {
-            .testimonial-section {
-                background-attachment: scroll;
-            }
-
-            .testimonial-section .swiper-button-next,
-            .testimonial-section .swiper-button-prev {
-                display: none;
-            }
-        }
+	.testimonial-section .swiper-button-next,
+	.testimonial-section .swiper-button-prev {
+		display: none;
+	}
+}
 /* ============================= Testimonial Section CSS ============================= */
 
 /* ============================= How It Works Section CSS ============================= */
@@ -769,8 +1117,6 @@ body {
 	transform: translateY(-8px);
 	box-shadow: 0 20px 40px rgba(13, 42, 77, 0.15);
 }
-
-
 
 .home-blog-section .read-more:hover {
 	color: var(--accent-color);
@@ -818,3 +1164,309 @@ body {
 	color: var(--accent-color) !important;
 }
 /* ============================= Footer Section CSS ============================= */
+
+/* ============================= Blog Page Styles ============================= */
+.blog-banner-section {
+	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
+		url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+/* ============================= Blog Page Styles ============================= */
+
+/* ============================= Contact US Page Styles ============================= */
+.contact-banner {
+	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
+		url("https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.contact-section input[type="file"]::-webkit-file-upload-button {
+	background-color: var(--accent-color);
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+/* ============================= Contact US Page Styles ============================= */
+
+/* ========================= Virtual Assistant Service Page ======================== */
+.va-banner {
+	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
+		url("https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80");
+}
+.va-service-details .floating-card {
+	backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.95);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.va-service-details .gradient-bg {
+	background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+}
+
+.va-service-details .service-card {
+	background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	transition: all 0.3s ease;
+}
+
+.va-service-details .service-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.va-service-details .icon-wrapper {
+	background: linear-gradient(
+		135deg,
+		var(--accent-color) 0%,
+		var(--secondary-color) 100%
+	);
+}
+
+.va-service-details .stats-card {
+	background: linear-gradient(
+		135deg,
+		var(--primary-color) 0%,
+		var(--secondary-color) 100%
+	);
+}
+
+.va-service-details .feature-item {
+	position: relative;
+	overflow: hidden;
+}
+
+.va-service-details .feature-item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+	transition: left 0.3s ease;
+}
+
+.va-service-details .feature-item:hover::before {
+	left: 0;
+}
+
+.va-service-details .pulse-dot {
+	animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.8;
+		transform: scale(1.1);
+	}
+}
+
+.va-service-details .text-gradient {
+	background: linear-gradient(
+		135deg,
+		var(--primary-color) 0%,
+		var(--accent-color) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.va-service-details .process-step {
+	position: relative;
+}
+
+.va-service-details .process-line {
+	position: absolute;
+	top: 50%;
+	right: -50px;
+	width: 100px;
+	height: 2px;
+	background: linear-gradient(90deg, var(--accent-color), transparent);
+}
+
+@media (max-width: 768px) {
+	.va-service-details .process-line {
+		display: none;
+	}
+}
+/* ========================= Virtual Assistant Service Page ======================== */
+
+/* ========================= Content Writers Service Page ======================== */
+.writer-banner {
+	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
+		url("https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80");
+}
+.writers-details-section .service-card {
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.writers-details-section .service-card:hover {
+	transform: translateY(-8px);
+}
+
+.writers-details-section .process-step {
+	position: relative;
+}
+
+.writers-details-section .process-step::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: -2rem;
+	width: 2rem;
+	height: 2px;
+	background: linear-gradient(90deg, var(--accent-color), transparent);
+	transform: translateY(-50%);
+}
+
+.writers-details-section .process-step:last-child::after {
+	display: none;
+}
+
+.writers-details-section .floating-element {
+	animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.writers-details-section .gradient-overlay {
+	background: linear-gradient(135deg, rgba(13, 42, 77, 0.9), rgba(21, 111, 135, 0.8));
+}
+
+.writers-details-section .pattern-bg {
+	background-image: radial-gradient(
+			circle at 20% 50%,
+			rgba(31, 162, 255, 0.1) 0%,
+			transparent 50%
+		),
+		radial-gradient(circle at 80% 20%, rgba(21, 111, 135, 0.1) 0%, transparent 50%);
+}
+/* ========================= Content Writers Service Page ======================== */
+
+/* ========================= Web Developers Service Page ======================== */
+.dev-banner {
+	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
+		url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80");
+}
+
+.developers-details-section .service-card {
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.developers-details-section .service-card:hover {
+	transform: translateY(-8px);
+}
+
+.developers-details-section .tech-icon {
+	transition: all 0.3s ease;
+}
+
+.developers-details-section .tech-icon:hover {
+	transform: scale(1.1) rotate(5deg);
+}
+
+.developers-details-section .process-step {
+	position: relative;
+}
+
+.developers-details-section .process-step::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: -2rem;
+	width: 2rem;
+	height: 2px;
+	background: linear-gradient(90deg, var(--accent-color), transparent);
+	transform: translateY(-50%);
+}
+
+.developers-details-section .process-step:last-child::after {
+	display: none;
+}
+
+.developers-details-section .floating-element {
+	animation: float 6s ease-in-out infinite;
+}
+
+.developers-details-section .code-animation {
+	animation: code-typing 4s infinite;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes code-typing {
+	0%,
+	100% {
+		opacity: 0.7;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+.developers-details-section .gradient-overlay {
+	background: linear-gradient(135deg, rgba(13, 42, 77, 0.9), rgba(21, 111, 135, 0.8));
+}
+
+.developers-details-section .pattern-bg {
+	background-image: radial-gradient(
+			circle at 20% 50%,
+			rgba(31, 162, 255, 0.1) 0%,
+			transparent 50%
+		),
+		radial-gradient(circle at 80% 20%, rgba(21, 111, 135, 0.1) 0%, transparent 50%),
+		linear-gradient(
+			45deg,
+			transparent 30%,
+			rgba(31, 162, 255, 0.05) 50%,
+			transparent 70%
+		);
+}
+
+.developers-details-section .code-bg {
+	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231fa2ff' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* ========================= Web Developers Service Page ======================== */
+
+/* ========================= Digital Marketing Service Page ======================== */
+.marketing-banner {
+	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
+		url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80");
+}
+/* ========================= Digital Marketing Service Page ======================== */
+
+/* ========================= Data Entry Service Page ======================== */
+.data-entry-banner {
+	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
+		url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80");
+}
+/* ========================= Data Entry Service Page ======================== */

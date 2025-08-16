@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Staff - Hire the Best</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="bg-white sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="navbar min-h-[80px] px-0">
+                <!-- Logo -->
+                <div class="navbar-start">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-accent-color rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-secondary-color">Online Staff</h1>
+                            <p class="text-xs text-gray-500">Future of Work</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-base font-medium">
+                        <li><a href="/" class="text-secondary-color hover:text-primary-color transition-colors">HOME</a>
+                        </li>
+                        <li><a href="/about-us.html"
+                                class="text-secondary-color hover:text-primary-color transition-colors">ABOUT
+                                US</a>
+                        </li>
+
+                        <!-- Services Dropdown -->
+                        <li class="dropdown dropdown-hover">
+                            <a href="/services.html"
+                                class="text-secondary-color hover:text-primary-color transition-colors">
+                                SERVICES <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <ul class="dropdown-content menu p-2 shadow-lg bg-white rounded-box w-64 mt-2">
+                                <li><a href="#" class="hover:bg-gray-100">Virtual Assistants</a></li>
+                                <li><a href="#" class="hover:bg-gray-100">Content Writers</a></li>
+                                <li><a href="#" class="hover:bg-gray-100">Web Developers</a></li>
+                                <li><a href="#" class="hover:bg-gray-100">Digital Marketing</a></li>
+                                <li><a href="#" class="hover:bg-gray-100">Data Entry</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="/resources.html" class="active-link transition-colors">RESOURCES</a>
+                        </li>
+                        <li><a href="/contact-us.html"
+                                class="text-secondary-color hover:text-primary-color transition-colors">CONTACT
+                                US</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA Button & Mobile Menu -->
+                <div class="navbar-end">
+                    <a href="/contact-us.html"
+                        class="btn bg-accent-color hover:bg-pink-600 text-white border-0 hidden md:inline-flex mr-4">
+                        SEND US YOUR REQUIREMENT
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="dropdown dropdown-end lg:hidden">
+                        <label tabindex="0" class="btn btn-ghost" onclick="toggleMobileMenu()">
+                            <i class="fas fa-bars text-xl"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="mobile-menu bg-white border-t lg:hidden">
+            <div class="container mx-auto px-4 py-4">
+                <ul class="space-y-2">
+                    <li><a href="/"
+                            class="block py-2 text-secondary-color hover:text-primary-color transition-colors">HOME</a>
+                    </li>
+                    <li><a href="/about-us.html"
+                            class="block py-2 text-secondary-color hover:text-primary-color transition-colors">ABOUT
+                            US</a></li>
+                    <li>
+                        <div class="collapse collapse-arrow">
+                            <input type="checkbox" />
+                            <div
+                                class="collapse-title py-2 text-secondary-color hover:text-primary-color transition-colors min-h-0 px-0">
+                                SERVICES
+                            </div>
+                            <div class="collapse-content px-4">
+                                <ul class="space-y-1">
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Virtual
+                                            Assistants</a></li>
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Content
+                                            Writers</a></li>
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Web
+                                            Developers</a></li>
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Digital
+                                            Marketing</a></li>
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Data
+                                            Entry</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/resources.html"
+                            class="block py-2 text-secondary-color hover:text-primary-color transition-colors">RESOURCES</a>
+                    </li>
+                    <li><a href="/contact-us.html"
+                            class="block py-2 text-secondary-color hover:text-primary-color transition-colors">CONTACT
+                            US</a></li>
+                    <li class="pt-4">
+                        <a href="/contact-us.html"
+                            class="btn bg-accent-color hover:bg-pink-600 text-white border-0 w-full">
+                            SEND US YOUR REQUIREMENT
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Contact Info -->
+                <div class="mt-6 pt-4 border-t border-gray-200">
+                    <div class="space-y-2 text-sm">
+                        <p class="flex items-center text-gray-600">
+                            <i class="fas fa-envelope mr-2 text-accent-color"></i>
+                            info@onlinestaff.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <!-- ======================================= Banner Section ======================================= -->
+        <section class="blog-banner-section py-16 px-4">
+            <div class="content-wrapper container mx-auto max-w-4xl text-center">
+                <!-- Main Content -->
+                <div class="space-y-6">
+                    <!-- Main Title -->
+                    <h1 class="font-poppins font-bold text-4xl md:text-5xl text-white leading-tight">
+                        Resources
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="font-inter text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
+                        Insights, tips, and industry knowledge to help your business grow
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- ======================================= Banner Section ======================================= -->
+
+
+
+        <!--======================================= Blogs Section =======================================-->
+        <section class="home-blog-section py-20 bg-gray-50 font-poppins">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-primary-color mb-6">
+                        Latest <span class="text-accent-color">Resources</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Stay updated with expert insights, tips, and strategies to maximize your virtual team's
+                        potential and
+                        grow your business.
+                    </p>
+                </div>
+
+                <!-- Blog Posts Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+                    <!-- Blog Post 1: Virtual Assistant Time Savings -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Virtual Assistant Time Management" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-purple-500 bg-opacity-10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                Productivity
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                5 Ways a Virtual Assistant Saves You Time
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Discover how delegating routine tasks to a virtual assistant can free up hours in your
+                                day and
+                                boost your business productivity.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    5 min read
+                                </span>
+                                <span>Jan 15, 2025</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2: Website Maintenance -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Website Maintenance and Development" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-purple-500 bg-opacity-10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                Web Development
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                Top Website Maintenance Tips for 2025
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Keep your website running smoothly and securely with these essential maintenance
+                                practices and
+                                expert recommendations.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    7 min read
+                                </span>
+                                <span>Jan 12, 2025</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3: Social Media Engagement -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Social Media Marketing Strategy" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-purple-500 bg-opacity-10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                Social Media
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                How to Boost Social Media Engagement
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Learn proven strategies and tactics to increase your social media engagement and build a
+                                loyal
+                                community around your brand.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    6 min read
+                                </span>
+                                <span>Jan 10, 2025</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4: Remote Team Management -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Remote Team Collaboration" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-green-500 bg-opacity-10 text-green-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                Remote Work
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                Best Practices for Managing Remote Teams
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Effective strategies for leading and coordinating remote virtual assistants to maximize
+                                productivity and team cohesion.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    8 min read
+                                </span>
+                                <span>Jan 8, 2025</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 5: E-commerce Automation -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="E-commerce Automation Tools" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-orange-500 bg-opacity-10 text-orange-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                E-commerce
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                Automating Your E-commerce Operations
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Streamline your online store with virtual assistants handling inventory management,
+                                customer service, and order processing.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    9 min read
+                                </span>
+                                <span>Jan 5, 2025</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 6: Data Security -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Data Security and Privacy" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-red-500 bg-opacity-10 text-red-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                Security
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                Protecting Your Business Data with VAs
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Essential security measures and best practices when working with virtual assistants to
+                                keep your sensitive data safe.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    7 min read
+                                </span>
+                                <span>Jan 3, 2025</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 7: Cost Optimization -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Business Cost Optimization" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-blue-500 bg-opacity-10 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                Finance
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                Reducing Business Costs with Virtual Staff
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Calculate your potential savings and understand the true ROI of hiring virtual
+                                assistants for your business operations.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    6 min read
+                                </span>
+                                <span>Dec 30, 2024</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 8: Communication Tools -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Team Communication Tools" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-indigo-500 bg-opacity-10 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                Communication
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                Essential Tools for VA Communication
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Discover the best communication platforms and project management tools to stay
+                                connected with your virtual team efficiently.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    5 min read
+                                </span>
+                                <span>Dec 28, 2024</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 9: Scaling Your Business -->
+                    <article
+                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-10">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Business Growth and Scaling" class="w-full h-56 object-cover">
+                        </div>
+                        <div class="p-8">
+                            <!-- Category Badge -->
+                            <div
+                                class="inline-block bg-teal-500 bg-opacity-10 text-teal-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                Growth
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
+                                Scaling Your Business with Virtual Teams
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Learn how to strategically expand your operations using virtual assistants and build a
+                                scalable business model for sustainable growth.
+                            </p>
+
+                            <!-- Meta Info -->
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    10 min read
+                                </span>
+                                <span>Dec 25, 2024</span>
+                            </div>
+
+                            <!-- Read More Link -->
+                            <a href="#"
+                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!--======================================= Blogs Section =======================================-->
+
+
+
+
+        <!--======================================= CTA Section =======================================-->
+        <section class="home-cta-section py-24 font-poppins relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <!-- Main Headline -->
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    Ready to Scale with
+                    <span class="text-accent-color">Expert Virtual Support?</span>
+                </h2>
+
+                <!-- Subheadline -->
+                <p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8 leading-relaxed">
+                    Join hundreds of successful businesses who've transformed their operations with our dedicated
+                    virtual teams.
+                    Start your journey today with a free consultation.
+                </p>
+
+                <!-- Benefits List -->
+                <div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-blue-100">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-accent-color" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-medium">No Setup Costs</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-accent-color" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-medium">24/7 Support</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-accent-color" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-medium">Money-Back Guarantee</span>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button
+                        class="cta-button bg-accent-color hover:bg-blue-600 text-white font-bold px-10 py-5 rounded-xl text-lg transition-all duration-300 shadow-lg">
+                        Schedule a Free Consultation
+                    </button>
+                    <button
+                        class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-color font-semibold px-8 py-4 rounded-xl transition-all duration-300">
+                        View Our Plans
+                    </button>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="mt-16 pt-8 border-t border-blue-400 border-opacity-30">
+                    <p class="text-blue-200 mb-6">Trusted by 500+ businesses worldwide</p>
+                    <div class="flex justify-center items-center gap-8 opacity-70">
+                        <!-- Trust badges or client logos would go here -->
+                        <div class="text-blue-200 text-sm">
+                            ⭐⭐⭐⭐⭐ 4.9/5 Client Rating
+                        </div>
+                        <div class="hidden sm:block w-px h-6 bg-blue-400"></div>
+                        <div class="text-blue-200 text-sm">
+                            💼 500+ Projects Completed
+                        </div>
+                        <div class="hidden sm:block w-px h-6 bg-blue-400"></div>
+                        <div class="text-blue-200 text-sm">
+                            🚀 98% Client Retention Rate
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-accent-color rounded-full opacity-5 -translate-y-48 translate-x-48">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-color rounded-full opacity-5 translate-y-32 -translate-x-32">
+            </div>
+        </section>
+        <!--======================================= CTA Section =======================================-->
+
+    </main>
+
+    <footer class="online-staff-footer bg-primary-color text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-accent-color rounded-lg flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold font-poppins">Online Staff</h3>
+                    </div>
+                    <p class="text-gray-300 font-inter text-sm leading-relaxed">
+                        Empowering businesses with reliable virtual assistance solutions. From web development to
+                        administrative tasks, we deliver excellence with trust.
+                    </p>
+                    <div class="mt-6 flex space-x-2">
+                        <button
+                            class="bg-accent-color text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors">
+                            Get Quote
+                        </button>
+                        <button
+                            class="border border-gray-600 text-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:border-accent-color hover:text-accent-color transition-colors">
+                            Free Audit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <div>
+                    <h4 class="text-lg font-semibold font-poppins mb-4">About Us</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Account Tiers
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold font-poppins mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Web Development Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Data Entry & Admin Tasks
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Ecommerce Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Social Media Assistance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Personal Virtual Assistant
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                WordPress Maintenance
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Partners & Quick Links Combined -->
+                <div>
+                    <h4 class="text-lg font-semibold font-poppins mb-4">Partners</h4>
+                    <ul class="space-y-3 mb-6">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                AI Website Monitor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Mydynamic VA
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Online Staff Team
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold font-poppins mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Pricing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Portfolio / Case Studies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div
+                        class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 mb-4 md:mb-0">
+                        <p class="text-gray-400 font-inter text-sm">
+                            © 2025
+                            <a href="#" class="text-accent-color hover:text-blue-300 transition-colors">Online
+                                Staff</a>.
+                            All rights reserved.
+                        </p>
+                        <p class="text-gray-400 font-inter text-sm">
+                            Crafted with <span class="text-red-400">♥</span> for modern businesses
+                        </p>
+                    </div>
+
+                    <!-- Legal Links -->
+                    <div
+                        class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
+                        <a href="#"
+                            class="text-gray-400 font-inter text-sm hover-accent transition-colors duration-200">
+                            Privacy Policy
+                        </a>
+                        <a href="#"
+                            class="text-gray-400 font-inter text-sm hover-accent transition-colors duration-200">
+                            Terms and Conditions
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-400 font-inter text-sm">Follow us:</span>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.024-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.739.097.118.112.221.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.013C24.007 5.367 18.641.001 12.017.001z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Main JS File -->
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>

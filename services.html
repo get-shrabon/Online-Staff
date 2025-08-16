@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/servicesPage.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
 </head>
@@ -33,15 +34,16 @@
                 <!-- Desktop Navigation -->
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 text-base font-medium">
-                        <li><a href="/" class="transition-colors active-link">HOME</a>
+                        <li><a href="/" class="text-secondary-color hover:text-primary-color transition-colors">HOME</a>
                         </li>
-                        <li><a href="/about-us.html" class="text-secondary-color hover:text-primary-color transition-colors">ABOUT
+                        <li><a href="/about-us.html"
+                                class="text-secondary-color hover:text-primary-color transition-colors">ABOUT
                                 US</a>
                         </li>
 
                         <!-- Services Dropdown -->
                         <li class="dropdown dropdown-hover">
-                            <a href="/services.html" class="text-secondary-color hover:text-primary-color transition-colors">
+                            <a href="/services.html" class="active-link transition-colors">
                                 SERVICES <i class="fas fa-chevron-down ml-1 text-xs"></i>
                             </a>
                             <ul class="dropdown-content menu p-2 shadow-lg bg-white rounded-box w-64 mt-2">
@@ -56,14 +58,15 @@
                         <li><a href="/resources.html"
                                 class="text-secondary-color hover:text-primary-color transition-colors">RESOURCES</a>
                         </li>
-                        <li><a href="/contact-us.html" class="text-secondary-color hover:text-primary-color transition-colors">CONTACT
+                        <li><a href="/contact-us.html"
+                                class="text-secondary-color hover:text-primary-color transition-colors">CONTACT
                                 US</a></li>
                     </ul>
                 </div>
 
                 <!-- CTA Button & Mobile Menu -->
                 <div class="navbar-end">
-                    <a href="#"
+                    <a href="/contact-us.html"
                         class="btn bg-accent-color hover:bg-pink-600 text-white border-0 hidden md:inline-flex mr-4">
                         SEND US YOUR REQUIREMENT
                     </a>
@@ -123,7 +126,8 @@
                             class="block py-2 text-secondary-color hover:text-primary-color transition-colors">CONTACT
                             US</a></li>
                     <li class="pt-4">
-                        <a href="/contact-us.html" class="btn bg-accent-color hover:bg-pink-600 text-white border-0 w-full">
+                        <a href="/contact-us.html"
+                            class="btn bg-accent-color hover:bg-pink-600 text-white border-0 w-full">
                             SEND US YOUR REQUIREMENT
                         </a>
                     </li>
@@ -144,184 +148,104 @@
     <main>
 
         <!-- ======================================= Banner Section ======================================= -->
-        <div class="home-banner">
-            <section class="hero-section min-h-screen flex items-center justify-center relative">
-                <!-- Floating Particles -->
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
+        <section class="services-banner-section py-24 lg:py-32 font-poppins text-white relative min-h-[70vh] flex items-center">
 
-                <!-- Main Content Container -->
-                <div class="container mx-auto px-6 lg:px-8 relative z-20">
-                    <div class="text-center max-w-5xl mx-auto">
+            <!-- Floating Shapes -->
+            <div class="banner-floating-shapes"></div>
+            <div class="banner-floating-shapes"></div>
+            <div class="banner-floating-shapes"></div>
 
-                        <!-- Trust Badge -->
-                        <div
-                            class="inline-flex items-center space-x-3 px-6 py-3 rounded-full glass-effect mb-8 transform hover:scale-105 transition-all duration-300">
-                            <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50">
-                            </div>
-                            <span class="text-white font-medium text-sm lg:text-base">Trusted by 1000+ Global
-                                Businesses</span>
-                            <div class="flex -space-x-2">
-                                <div
-                                    class="w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-2 border-white">
-                                </div>
-                                <div
-                                    class="w-6 h-6 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full border-2 border-white">
-                                </div>
-                                <div
-                                    class="w-6 h-6 bg-gradient-to-br from-green-400 to-green-600 rounded-full border-2 border-white">
-                                </div>
-                            </div>
+            <!-- Tech Grid Background -->
+            <div class="banner-tech-grid"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="banner-hero-content max-w-4xl mx-auto text-center">
+
+                    <!-- Badge/Tag -->
+                    <div
+                        class="inline-block bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-full px-6 py-2 mb-8">
+                        <span class="text-white font-medium text-sm tracking-wide">
+                            ✨ PROFESSIONAL VIRTUAL SERVICES
+                        </span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-8">
+                        Virtual Services That
+                        <span class="text-yellow-300 relative">
+                            Empower
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-yellow-300 opacity-60"
+                                viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 10C50 2 100 2 198 10" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        Your Business
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p
+                        class="text-xl md:text-2xl lg:text-3xl text-blue-100 max-w-5xl mx-auto leading-relaxed mb-12 font-light">
+                        From website development to full-scale online management — choose the service that fits your
+                        needs.
+                    </p>
+
+                    <!-- Feature Highlights -->
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-blue-100">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                            <span class="font-medium">Expert Developers</span>
                         </div>
-
-                        <!-- Main Headline -->
-                        <h1 class="text-gradient text-2xl md:text-4xl lg:text-7xl font-bold leading-tight mb-8">
-                            Your Trusted<br>
-                            <span class="accent-gradient-text bg-clip-text text-transparent">Virtual Team</span><br>
-                            for Every Need
-                        </h1>
-
-                        <!-- Subheadline -->
-                        <p
-                            class="text-md md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-12 font-light">
-                            From Web Development to Digital Marketing — Premium Virtual Services,<br
-                                class="hidden md:block">
-                            <span class="text-blue-300 font-medium">Delivered by Expert Professionals</span>
-                        </p>
-
-                        <!-- Feature Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-                            <div
-                                class="glass-effect rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 group">
-                                <div
-                                    class="w-16 h-16 accent-gradient rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </div>
-                                <h3 class="text-white font-semibold text-lg mb-2">24/7 Support</h3>
-                                <p class="text-gray-400 text-sm">Round-the-clock assistance</p>
-                            </div>
-
-                            <div
-                                class="glass-effect rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 group">
-                                <div
-                                    class="w-16 h-16 accent-gradient rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <h3 class="text-white font-semibold text-lg mb-2">Expert Professionals</h3>
-                                <p class="text-gray-400 text-sm">Verified skilled talent</p>
-                            </div>
-
-                            <div
-                                class="glass-effect rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 group">
-                                <div
-                                    class="w-16 h-16 accent-gradient rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <h3 class="text-white font-semibold text-lg mb-2">Money-Back Guarantee</h3>
-                                <p class="text-gray-400 text-sm">100% satisfaction guaranteed</p>
-                            </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                            <span class="font-medium">24/7 Support</span>
                         </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                            <span class="font-medium">Scalable Solutions</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                            <span class="font-medium">Custom Packages</span>
+                        </div>
+                    </div>
 
-                        <!-- CTA Buttons -->
-                        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-                            <button
-                                class="btn-primary relative overflow-hidden px-10 py-5 text-white font-bold text-lg rounded-2xl group">
-                                <span class="relative z-10 flex items-center">
-                                    Start Your Project Now
-                                    <svg class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                    </svg>
-                                </span>
-                            </button>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="/contact-us.html"
+                            class="banner-cta-button bg-white text-primary-color hover:bg-gray-100 font-bold px-10 py-5 rounded-xl text-lg transition-all duration-300 shadow-lg flex items-center gap-3 group">
+                            Get Started Today
+                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
 
-                            <button class="btn-secondary px-10 py-5 text-white font-semibold text-lg rounded-2xl group">
-                                <span class="flex items-center">
-                                    Explore Services
-                                    <svg class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7">
-                                        </path>
-                                    </svg>
-                                </span>
-                            </button>
+                    </div>
+
+                    <!-- Stats Section -->
+                    <div class="mt-16 pt-8 border-t border-white border-opacity-20">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                            <div>
+                                <div class="text-3xl lg:text-4xl font-bold text-yellow-300 mb-2">500+</div>
+                                <div class="text-blue-100 font-medium">Projects Completed</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl lg:text-4xl font-bold text-yellow-300 mb-2">98%</div>
+                                <div class="text-blue-100 font-medium">Client Satisfaction</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl lg:text-4xl font-bold text-yellow-300 mb-2">24/7</div>
+                                <div class="text-blue-100 font-medium">Support Available</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Floating Service Icons -->
-                <div class="absolute top-20 left-10 floating-card">
-                    <div class="service-icon w-16 h-16 glass-effect rounded-2xl flex items-center justify-center">
-                        <svg class="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="absolute top-32 right-16 floating-card">
-                    <div class="service-icon w-16 h-16 glass-effect rounded-2xl flex items-center justify-center">
-                        <svg class="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="absolute bottom-32 left-20 floating-card">
-                    <div class="service-icon w-16 h-16 glass-effect rounded-2xl flex items-center justify-center">
-                        <svg class="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="absolute bottom-20 right-12 floating-card">
-                    <div class="service-icon w-16 h-16 glass-effect rounded-2xl flex items-center justify-center">
-                        <svg class="w-8 h-8 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Scroll Indicator -->
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 animate-bounce">
-                    <div class="glass-effect rounded-full p-3">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3">
-                            </path>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
         <!-- ======================================= Banner Section ======================================= -->
+
 
         <!--======================================= Services Overview Section =======================================-->
         <section class="services-section py-20 bg-white">
@@ -500,138 +424,6 @@
         <!--======================================= Services Overview Section =======================================-->
 
 
-
-        <!--======================================= Why Choose Us Section =======================================-->
-        <section class="why-choose-section py-20 bg-gray-50">
-            <div class="container mx-auto px-6 lg:px-8 max-w-7xl">
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl lg:text-5xl font-bold font-poppins text-primary-color mb-6">
-                        Why Choose <span class="text-accent-color">Our Team</span>
-                    </h2>
-                    <p class="text-lg text-gray-600 font-inter max-w-3xl mx-auto leading-relaxed">
-                        Experience the difference with our dedicated professionals who deliver exceptional results
-                        through
-                        innovation, reliability, and personalized service.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-                    <!-- Features Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <!-- Experienced Remote Professionals -->
-                        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
-                            <div
-                                class="bg-gradient-to-br from-blue-50 to-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" class="text-accent-color">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                    <circle cx="9" cy="7" r="4" />
-                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-3">Experienced Remote
-                                Professionals</h3>
-                            <p class="text-gray-600 font-inter text-sm leading-relaxed">
-                                Skilled experts with years of industry experience working remotely across global
-                                markets.
-                            </p>
-                        </div>
-
-                        <!-- Cost-Effective Solutions -->
-                        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
-                            <div
-                                class="bg-gradient-to-br from-green-50 to-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" class="text-green-600">
-                                    <line x1="12" y1="1" x2="12" y2="23" />
-                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-3">Cost-Effective
-                                Solutions</h3>
-                            <p class="text-gray-600 font-inter text-sm leading-relaxed">
-                                Premium quality services at competitive rates, maximizing your return on investment.
-                            </p>
-                        </div>
-
-                        <!-- Flexible Subscription Plans -->
-                        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
-                            <div
-                                class="bg-gradient-to-br from-purple-50 to-purple-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" class="text-purple-600">
-                                    <path
-                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                                    <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
-                                    <line x1="12" y1="22.08" x2="12" y2="12" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-3">Flexible Subscription
-                                Plans
-                            </h3>
-                            <p class="text-gray-600 font-inter text-sm leading-relaxed">
-                                Customizable service packages that scale with your business needs and budget.
-                            </p>
-                        </div>
-
-                        <!-- 24/7 Availability -->
-                        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
-                            <div
-                                class="bg-gradient-to-br from-orange-50 to-orange-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" class="text-orange-600">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <polyline points="12,6 12,12 16,14" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-3">24/7 Availability
-                            </h3>
-                            <p class="text-gray-600 font-inter text-sm leading-relaxed">
-                                Round-the-clock support and communication across different time zones worldwide.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Professional Image -->
-                    <div class="flex justify-center lg:justify-end">
-                        <div class="relative">
-                            <div
-                                class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl opacity-20 blur-xl">
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
-                                alt="Professional team collaboration"
-                                class="relative rounded-3xl shadow-2xl w-full max-w-lg h-96 object-cover">
-                            <div class="absolute -bottom-6 -right-6 trust-stat rounded-2xl p-6 text-white shadow-xl">
-                                <div class="text-2xl font-bold font-poppins">500+</div>
-                                <div class="text-sm font-inter opacity-90">Projects Completed</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trust Elements -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div
-                        class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
-                        <div class="text-4xl font-bold font-poppins text-accent-color mb-2">5+</div>
-                        <div class="text-gray-600 font-inter">Years in Business</div>
-                    </div>
-                    <div
-                        class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
-                        <div class="text-4xl font-bold font-poppins text-accent-color mb-2">500+</div>
-                        <div class="text-gray-600 font-inter">Completed Projects</div>
-                    </div>
-                    <div
-                        class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
-                        <div class="text-4xl font-bold font-poppins text-accent-color mb-2">25+</div>
-                        <div class="text-gray-600 font-inter">Global Clients</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--======================================= Why Choose Us Section =======================================-->
 
 
         <!--======================================= Pricing Section =======================================-->
@@ -927,646 +719,137 @@
         <!--======================================= Pricing Section =======================================-->
 
 
-        <!--======================================= Portfolio Section =======================================-->
-        <section class="portfolio-section py-20 bg-white">
+        <!--======================================= Why Choose Us Section =======================================-->
+        <section class="why-choose-section py-20 bg-gray-50">
             <div class="container mx-auto px-6 lg:px-8 max-w-7xl">
                 <!-- Section Header -->
                 <div class="text-center mb-16">
                     <h2 class="text-4xl lg:text-5xl font-bold font-poppins text-primary-color mb-6">
-                        Our <span class="text-accent-color">Recent Work</span>
+                        Why Choose <span class="text-accent-color">Our Team</span>
                     </h2>
-                    <p class="text-lg text-gray-600 font-inter max-w-3xl mx-auto leading-relaxed mb-10">
-                        Discover our portfolio of successful projects that showcase our expertise in web development,
-                        social
-                        media marketing, and eCommerce solutions.
+                    <p class="text-lg text-gray-600 font-inter max-w-3xl mx-auto leading-relaxed">
+                        Experience the difference with our dedicated professionals who deliver exceptional results
+                        through
+                        innovation, reliability, and personalized service.
                     </p>
+                </div>
 
-                    <!-- Filter Buttons -->
-                    <div class="flex flex-wrap justify-center gap-4 mb-12">
-                        <button
-                            class="filter-btn active px-6 py-3 rounded-full font-semibold font-inter text-white bg-accent-color"
-                            data-filter="all">
-                            All Projects
-                        </button>
-                        <button
-                            class="filter-btn px-6 py-3 rounded-full font-semibold font-inter text-primary-color bg-gray-100"
-                            data-filter="web-development">
-                            Web Development
-                        </button>
-                        <button
-                            class="filter-btn px-6 py-3 rounded-full font-semibold font-inter text-primary-color bg-gray-100"
-                            data-filter="social-media">
-                            Social Media
-                        </button>
-                        <button
-                            class="filter-btn px-6 py-3 rounded-full font-semibold font-inter text-primary-color bg-gray-100"
-                            data-filter="ecommerce">
-                            eCommerce
-                        </button>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                    <!-- Features Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <!-- Experienced Remote Professionals -->
+                        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+                            <div
+                                class="bg-gradient-to-br from-blue-50 to-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="text-accent-color">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-3">Experienced Remote
+                                Professionals</h3>
+                            <p class="text-gray-600 font-inter text-sm leading-relaxed">
+                                Skilled experts with years of industry experience working remotely across global
+                                markets.
+                            </p>
+                        </div>
+
+                        <!-- Cost-Effective Solutions -->
+                        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+                            <div
+                                class="bg-gradient-to-br from-green-50 to-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="text-green-600">
+                                    <line x1="12" y1="1" x2="12" y2="23" />
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-3">Cost-Effective
+                                Solutions</h3>
+                            <p class="text-gray-600 font-inter text-sm leading-relaxed">
+                                Premium quality services at competitive rates, maximizing your return on investment.
+                            </p>
+                        </div>
+
+                        <!-- Flexible Subscription Plans -->
+                        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+                            <div
+                                class="bg-gradient-to-br from-purple-50 to-purple-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="text-purple-600">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                    <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
+                                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-3">Flexible Subscription
+                                Plans
+                            </h3>
+                            <p class="text-gray-600 font-inter text-sm leading-relaxed">
+                                Customizable service packages that scale with your business needs and budget.
+                            </p>
+                        </div>
+
+                        <!-- 24/7 Availability -->
+                        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+                            <div
+                                class="bg-gradient-to-br from-orange-50 to-orange-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="text-orange-600">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12,6 12,12 16,14" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-3">24/7 Availability
+                            </h3>
+                            <p class="text-gray-600 font-inter text-sm leading-relaxed">
+                                Round-the-clock support and communication across different time zones worldwide.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Professional Image -->
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="relative">
+                            <div
+                                class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl opacity-20 blur-xl">
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                                alt="Professional team collaboration"
+                                class="relative rounded-3xl shadow-2xl w-full max-w-lg h-96 object-cover">
+                            <div class="absolute -bottom-6 -right-6 trust-stat rounded-2xl p-6 text-white shadow-xl">
+                                <div class="text-2xl font-bold font-poppins">500+</div>
+                                <div class="text-sm font-inter opacity-90">Projects Completed</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Portfolio Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
-
-                    <!-- Project 1: Tech Startup Website -->
-                    <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg"
-                        data-category="web-development">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Tech Startup Website" class="project-image w-full h-full object-cover">
-                            <div class="project-overlay">
-                                <div class="project-overlay-content text-center px-6">
-                                    <span
-                                        class="project-category inline-block px-3 py-1 rounded-full text-xs font-semibold text-white mb-3">
-                                        Web Development
-                                    </span>
-                                    <h3 class="text-xl font-bold font-poppins text-white mb-2">InnovateTech Solutions
-                                    </h3>
-                                    <p class="text-white font-inter text-sm mb-4">Modern SaaS platform with advanced
-                                        analytics dashboard</p>
-                                    <button
-                                        class="btn bg-white text-primary-color hover:bg-gray-100 border-none font-semibold font-inter px-2"
-                                        onclick="openModal('modal1')">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-2">InnovateTech
-                                Solutions</h3>
-                            <p class="text-gray-600 font-inter text-sm">Complete web platform for tech startup</p>
-                        </div>
+                <!-- Trust Elements -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div
+                        class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl font-bold font-poppins text-accent-color mb-2">5+</div>
+                        <div class="text-gray-600 font-inter">Years in Business</div>
                     </div>
-
-                    <!-- Project 2: Restaurant Website -->
-                    <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg"
-                        data-category="web-development">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Restaurant Website" class="project-image w-full h-full object-cover">
-                            <div class="project-overlay">
-                                <div class="project-overlay-content text-center px-6">
-                                    <span
-                                        class="project-category inline-block px-3 py-1 rounded-full text-xs font-semibold text-white mb-3">
-                                        Web Development
-                                    </span>
-                                    <h3 class="text-xl font-bold font-poppins text-white mb-2">Gourmet Bistro</h3>
-                                    <p class="text-white font-inter text-sm mb-4">Elegant restaurant website with online
-                                        reservation system</p>
-                                    <button
-                                        class="btn bg-white text-primary-color hover:bg-gray-100 border-none font-semibold font-inter px-2"
-                                        onclick="openModal('modal2')">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-2">Gourmet Bistro</h3>
-                            <p class="text-gray-600 font-inter text-sm">Restaurant website with booking system</p>
-                        </div>
+                    <div
+                        class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl font-bold font-poppins text-accent-color mb-2">500+</div>
+                        <div class="text-gray-600 font-inter">Completed Projects</div>
                     </div>
-
-                    <!-- Project 3: Social Media Campaign -->
-                    <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg"
-                        data-category="social-media">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Social Media Campaign" class="project-image w-full h-full object-cover">
-                            <div class="project-overlay">
-                                <div class="project-overlay-content text-center px-6">
-                                    <span
-                                        class="project-category inline-block px-3 py-1 rounded-full text-xs font-semibold text-white mb-3">
-                                        Social Media
-                                    </span>
-                                    <h3 class="text-xl font-bold font-poppins text-white mb-2">FashionForward Brand</h3>
-                                    <p class="text-white font-inter text-sm mb-4">Complete social media strategy and
-                                        content
-                                        creation</p>
-                                    <button
-                                        class="btn bg-white text-primary-color hover:bg-gray-100 border-none font-semibold font-inter px-2"
-                                        onclick="openModal('modal3')">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-2">FashionForward Brand
-                            </h3>
-                            <p class="text-gray-600 font-inter text-sm">Social media marketing campaign</p>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: eCommerce Store -->
-                    <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg" data-category="ecommerce">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="eCommerce Store" class="project-image w-full h-full object-cover">
-                            <div class="project-overlay">
-                                <div class="project-overlay-content text-center px-6">
-                                    <span
-                                        class="project-category inline-block px-3 py-1 rounded-full text-xs font-semibold text-white mb-3">
-                                        eCommerce
-                                    </span>
-                                    <h3 class="text-xl font-bold font-poppins text-white mb-2">ElectroHub Store</h3>
-                                    <p class="text-white font-inter text-sm mb-4">Full-featured electronics eCommerce
-                                        platform</p>
-                                    <button
-                                        class="btn bg-white text-primary-color hover:bg-gray-100 border-none font-semibold font-inter px-2"
-                                        onclick="openModal('modal4')">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-2">ElectroHub Store</h3>
-                            <p class="text-gray-600 font-inter text-sm">Complete eCommerce solution</p>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: Fitness App Landing -->
-                    <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg"
-                        data-category="web-development">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Fitness App Landing" class="project-image w-full h-full object-cover">
-                            <div class="project-overlay">
-                                <div class="project-overlay-content text-center px-6">
-                                    <span
-                                        class="project-category inline-block px-3 py-1 rounded-full text-xs font-semibold text-white mb-3">
-                                        Web Development
-                                    </span>
-                                    <h3 class="text-xl font-bold font-poppins text-white mb-2">FitTrack Pro</h3>
-                                    <p class="text-white font-inter text-sm mb-4">Modern fitness app landing page with
-                                        animations</p>
-                                    <button
-                                        class="btn bg-white text-primary-color hover:bg-gray-100 border-none font-semibold font-inter px-2"
-                                        onclick="openModal('modal5')">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-2">FitTrack Pro</h3>
-                            <p class="text-gray-600 font-inter text-sm">Fitness app landing page</p>
-                        </div>
-                    </div>
-
-                    <!-- Project 6: Travel Agency Social Media -->
-                    <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg"
-                        data-category="social-media">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Travel Agency Social Media" class="project-image w-full h-full object-cover">
-                            <div class="project-overlay">
-                                <div class="project-overlay-content text-center px-6">
-                                    <span
-                                        class="project-category inline-block px-3 py-1 rounded-full text-xs font-semibold text-white mb-3">
-                                        Social Media
-                                    </span>
-                                    <h3 class="text-xl font-bold font-poppins text-white mb-2">Wanderlust Travels</h3>
-                                    <p class="text-white font-inter text-sm mb-4">Travel content strategy and visual
-                                        storytelling</p>
-                                    <button
-                                        class="btn bg-white text-primary-color hover:bg-gray-100 border-none font-semibold font-inter px-2"
-                                        onclick="openModal('modal6')">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold font-poppins text-primary-color mb-2">Wanderlust Travels
-                            </h3>
-                            <p class="text-gray-600 font-inter text-sm">Travel agency social media management</p>
-                        </div>
+                    <div
+                        class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl font-bold font-poppins text-accent-color mb-2">25+</div>
+                        <div class="text-gray-600 font-inter">Global Clients</div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Modals -->
-
-        <!-- Modal 1: InnovateTech Solutions -->
-        <dialog id="modal1" class="modal">
-            <div class="modal-box max-w-4xl bg-white">
-                <form method="dialog">
-                    <button
-                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gray-500 hover:text-gray-700">✕</button>
-                </form>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="InnovateTech Solutions" class="w-full h-64 object-cover rounded-2xl">
-                    </div>
-                    <div>
-                        <div
-                            class="bg-accent-color/10 inline-block px-3 py-1 rounded-full text-xs font-semibold text-accent-color mb-4">
-                            Web Development
-                        </div>
-                        <h3 class="text-2xl font-bold font-poppins text-primary-color mb-4">InnovateTech Solutions</h3>
-                        <p class="text-gray-600 font-inter mb-6 leading-relaxed">
-                            A comprehensive SaaS platform built with modern technologies including React, Node.js, and
-                            MongoDB.
-                            Features include real-time analytics dashboard, user management system, and advanced
-                            reporting
-                            tools.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-accent-color rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">React.js Frontend with TypeScript</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-accent-color rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Node.js Backend API</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-accent-color rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Real-time Analytics Dashboard</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-accent-color rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Mobile Responsive Design</span>
-                            </div>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button
-                                class="btn bg-accent-color hover:bg-blue-600 text-white border-none font-semibold font-inter">
-                                Visit Website
-                            </button>
-                            <button
-                                class="btn btn-outline border-accent-color text-accent-color hover:bg-accent-color hover:text-white font-semibold font-inter">
-                                View Code
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form method="dialog" class="modal-backdrop">
-                <button>close</button>
-            </form>
-        </dialog>
-
-        <!-- Modal 2: Gourmet Bistro -->
-        <dialog id="modal2" class="modal">
-            <div class="modal-box max-w-4xl bg-white">
-                <form method="dialog">
-                    <button
-                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gray-500 hover:text-gray-700">✕</button>
-                </form>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Gourmet Bistro" class="w-full h-64 object-cover rounded-2xl">
-                    </div>
-                    <div>
-                        <div
-                            class="bg-accent-color/10 inline-block px-3 py-1 rounded-full text-xs font-semibold text-accent-color mb-4">
-                            Web Development
-                        </div>
-                        <h3 class="text-2xl font-bold font-poppins text-primary-color mb-4">Gourmet Bistro</h3>
-                        <p class="text-gray-600 font-inter mb-6 leading-relaxed">
-                            Elegant restaurant website featuring an online reservation system, interactive menu, and
-                            customer
-                            review integration.
-                            Built with WordPress and custom PHP development for seamless user experience.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-accent-color rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Custom WordPress Theme</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-accent-color rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Online Reservation System</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-accent-color rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Interactive Digital Menu</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-accent-color rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Customer Review Integration</span>
-                            </div>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button
-                                class="btn bg-accent-color hover:bg-blue-600 text-white border-none font-semibold font-inter">
-                                Visit Website
-                            </button>
-                            <button
-                                class="btn btn-outline border-accent-color text-accent-color hover:bg-accent-color hover:text-white font-semibold font-inter">
-                                Case Study
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form method="dialog" class="modal-backdrop">
-                <button>close</button>
-            </form>
-        </dialog>
-
-        <!-- Modal 3: FashionForward Brand -->
-        <dialog id="modal3" class="modal">
-            <div class="modal-box max-w-4xl bg-white">
-                <form method="dialog">
-                    <button
-                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gray-500 hover:text-gray-700">✕</button>
-                </form>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="FashionForward Brand" class="w-full h-64 object-cover rounded-2xl">
-                    </div>
-                    <div>
-                        <div
-                            class="bg-purple-100 inline-block px-3 py-1 rounded-full text-xs font-semibold text-purple-600 mb-4">
-                            Social Media
-                        </div>
-                        <h3 class="text-2xl font-bold font-poppins text-primary-color mb-4">FashionForward Brand</h3>
-                        <p class="text-gray-600 font-inter mb-6 leading-relaxed">
-                            Complete social media strategy and content creation for a fashion brand, resulting in 300%
-                            increase
-                            in engagement
-                            and 150% growth in followers across all platforms within 6 months.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Content Strategy & Planning</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Visual Content Creation</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Influencer Partnerships</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Analytics & Reporting</span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 mb-6">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-purple-600">300%</div>
-                                <div class="text-xs text-gray-600 font-inter">Engagement Increase</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-purple-600">150%</div>
-                                <div class="text-xs text-gray-600 font-inter">Follower Growth</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-purple-600">50+</div>
-                                <div class="text-xs text-gray-600 font-inter">Content Pieces</div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button
-                                class="btn bg-purple-600 hover:bg-purple-700 text-white border-none font-semibold font-inter">
-                                View Campaign
-                            </button>
-                            <button
-                                class="btn btn-outline border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold font-inter">
-                                Results Report
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form method="dialog" class="modal-backdrop">
-                <button>close</button>
-            </form>
-        </dialog>
-
-        <!-- Modal 4: ElectroHub Store -->
-        <dialog id="modal4" class="modal">
-            <div class="modal-box max-w-4xl bg-white">
-                <form method="dialog">
-                    <button
-                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gray-500 hover:text-gray-700">✕</button>
-                </form>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="ElectroHub Store" class="w-full h-64 object-cover rounded-2xl">
-                    </div>
-                    <div>
-                        <div
-                            class="bg-green-100 inline-block px-3 py-1 rounded-full text-xs font-semibold text-green-600 mb-4">
-                            eCommerce
-                        </div>
-                        <h3 class="text-2xl font-bold font-poppins text-primary-color mb-4">ElectroHub Store</h3>
-                        <p class="text-gray-600 font-inter mb-6 leading-relaxed">
-                            Full-featured electronics eCommerce platform with advanced inventory management, multiple
-                            payment
-                            gateways,
-                            and customer review system. Built on WooCommerce with custom functionality.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">WooCommerce Platform</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Multi-Payment Gateway Integration</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Inventory Management System</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Advanced Search & Filtering</span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 mb-6">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-green-600">500+</div>
-                                <div class="text-xs text-gray-600 font-inter">Products</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-green-600">250%</div>
-                                <div class="text-xs text-gray-600 font-inter">Sales Increase</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-green-600">99.9%</div>
-                                <div class="text-xs text-gray-600 font-inter">Uptime</div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button
-                                class="btn bg-green-600 hover:bg-green-700 text-white border-none font-semibold font-inter">
-                                Visit Store
-                            </button>
-                            <button
-                                class="btn btn-outline border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold font-inter">
-                                View Features
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form method="dialog" class="modal-backdrop">
-                <button>close</button>
-            </form>
-        </dialog>
-
-        <!-- Modal 5: FitTrack Pro -->
-        <dialog id="modal5" class="modal">
-            <div class="modal-box max-w-4xl bg-white">
-                <form method="dialog">
-                    <button
-                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gray-500 hover:text-gray-700">✕</button>
-                </form>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="FitTrack Pro" class="w-full h-64 object-cover rounded-2xl">
-                    </div>
-                    <div>
-                        <div
-                            class="bg-orange-100 inline-block px-3 py-1 rounded-full text-xs font-semibold text-orange-600 mb-4">
-                            Web Development
-                        </div>
-                        <h3 class="text-2xl font-bold font-poppins text-primary-color mb-4">FitTrack Pro</h3>
-                        <p class="text-gray-600 font-inter mb-6 leading-relaxed">
-                            Modern fitness app landing page with smooth animations, interactive elements, and
-                            conversion-optimized design.
-                            Features include app preview, testimonials, and seamless app store integration.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Interactive Animations</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">App Store Integration</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Conversion Optimization</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Performance Optimized</span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 mb-6">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-orange-600">85%</div>
-                                <div class="text-xs text-gray-600 font-inter">Conversion Rate</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-orange-600">2.3s</div>
-                                <div class="text-xs text-gray-600 font-inter">Load Time</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-orange-600">10K+</div>
-                                <div class="text-xs text-gray-600 font-inter">App Downloads</div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button
-                                class="btn bg-orange-600 hover:bg-orange-700 text-white border-none font-semibold font-inter">
-                                Visit Landing Page
-                            </button>
-                            <button
-                                class="btn btn-outline border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold font-inter">
-                                View Analytics
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form method="dialog" class="modal-backdrop">
-                <button>close</button>
-            </form>
-        </dialog>
-
-        <!-- Modal 6: Wanderlust Travels -->
-        <dialog id="modal6" class="modal">
-            <div class="modal-box max-w-4xl bg-white">
-                <form method="dialog">
-                    <button
-                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gray-500 hover:text-gray-700">✕</button>
-                </form>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Wanderlust Travels" class="w-full h-64 object-cover rounded-2xl">
-                    </div>
-                    <div>
-                        <div
-                            class="bg-blue-100 inline-block px-3 py-1 rounded-full text-xs font-semibold text-blue-600 mb-4">
-                            Social Media
-                        </div>
-                        <h3 class="text-2xl font-bold font-poppins text-primary-color mb-4">Wanderlust Travels</h3>
-                        <p class="text-gray-600 font-inter mb-6 leading-relaxed">
-                            Comprehensive social media management for travel agency including visual storytelling,
-                            user-generated content campaigns,
-                            and destination-focused marketing strategies across multiple platforms.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Visual Storytelling Strategy</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">User-Generated Content Campaigns</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Multi-Platform Management</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                                <span class="font-inter text-sm text-gray-700">Destination Marketing</span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 mb-6">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-blue-600">400%</div>
-                                <div class="text-xs text-gray-600 font-inter">Reach Increase</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-blue-600">75%</div>
-                                <div class="text-xs text-gray-600 font-inter">Booking Increase</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold font-poppins text-blue-600">50K+</div>
-                                <div class="text-xs text-gray-600 font-inter">New Followers</div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button
-                                class="btn bg-blue-600 hover:bg-blue-700 text-white border-none font-semibold font-inter">
-                                View Campaign
-                            </button>
-                            <button
-                                class="btn btn-outline border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold font-inter">
-                                Success Story
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form method="dialog" class="modal-backdrop">
-                <button>close</button>
-            </form>
-        </dialog>
-        <!--======================================= Portfolio Section =======================================-->
+        <!--======================================= Why Choose Us Section =======================================-->
 
 
         <!--======================================= Testimonial Section =======================================-->
@@ -1899,509 +1182,141 @@
         <!--======================================= Testimonial Section =======================================-->
 
 
-        <!--======================================= How It Works Section =======================================-->
-        <section class="home-process-section py-20 bg-white font-poppins">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- ======================================= FAQ Section ======================================= -->
+        <section class="services-faq py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 max-w-7xl">
                 <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl lg:text-5xl font-bold text-primary-color mb-6">
-                        How It Works
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold font-poppins text-primary-color mb-4">
+                        Frequently Asked <span class="text-accent-color">Questions</span>
                     </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Get started with your virtual staff in just a few simple steps. Our streamlined process makes
-                        hiring
-                        simple and clear.
+                    <p class="text-gray-600 font-inter max-w-2xl mx-auto">
+                        Quick answers to common questions about our services and process.
                     </p>
                 </div>
-
-                <!-- Timeline Container -->
-                <div class="relative max-w-6xl mx-auto">
-                    <!-- Timeline Line -->
-                    <div class="timeline-line absolute top-24 left-0 right-0 h-1 rounded-full hidden lg:block"></div>
-
-                    <!-- Process Steps -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                        <!-- Step 1: Book Your Plan -->
-                        <div
-                            class="process-card relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
-                            <div class="text-center">
-                                <!-- Step Number -->
-                                <div
-                                    class="bg-accent-color text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto relative z-10">
-                                    1
-                                </div>
-
-                                <!-- Icon -->
-                                <div class="mb-6">
-                                    <svg class="w-16 h-16 mx-auto text-secondary-color" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
-                                    </svg>
-                                </div>
-
-                                <!-- Content -->
-                                <h3 class="text-xl font-semibold text-primary-color mb-3">
-                                    Book Your Plan
-                                </h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">
-                                    Choose the perfect plan that fits your business needs and budget requirements.
-                                </p>
+        
+                <!-- FAQ Grid - 2 Columns -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    <!-- Left Column -->
+                    <div>
+                        <!-- FAQ Item 1 -->
+                        <div class="collapse bg-white">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title font-poppins">
+                                What services do you offer?
+                            </div>
+                            <div class="collapse-content font-inter">
+                                <p>We provide web development, website maintenance, virtual assistant services, social media
+                                    marketing, WordPress websites, and eCommerce solutions.</p>
                             </div>
                         </div>
-
-                        <!-- Step 2: Meet Your Virtual Staff -->
-                        <div
-                            class="process-card relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
-                            <div class="text-center">
-                                <!-- Step Number -->
-                                <div
-                                    class="bg-accent-color text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto relative z-10">
-                                    2
-                                </div>
-
-                                <!-- Icon -->
-                                <div class="mb-6">
-                                    <svg class="w-16 h-16 mx-auto text-secondary-color" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.964 2.964 0 0 0 16.76 6c-.8 0-1.54.37-2.01.99l-1.54 2.02c-.28.37-.26.88.05 1.23l2.15 2.42V18h3zm-12.5-3c.83 0 1.5-.67 1.5-1.5S8.33 12 7.5 12 6 12.67 6 13.5 6.67 15 7.5 15zm3 0c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zm3 0c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5z" />
-                                    </svg>
-                                </div>
-
-                                <!-- Content -->
-                                <h3 class="text-xl font-semibold text-primary-color mb-3">
-                                    Meet Your Virtual Staff
-                                </h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">
-                                    Get introduced to your dedicated virtual team members and discuss project
-                                    requirements.
-                                </p>
+        
+                        <!-- FAQ Item 2 -->
+                        <div class="collapse bg-white">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title font-poppins">
+                                What's included in subscription plans?
+                            </div>
+                            <div class="collapse-content font-inter">
+                                <p>Plans include development work, maintenance, support, and VA hours. Pro and Enterprise plans
+                                    offer additional features like priority support and advanced analytics.</p>
                             </div>
                         </div>
-
-                        <!-- Step 3: Work Begins Instantly -->
-                        <div
-                            class="process-card relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
-                            <div class="text-center">
-                                <!-- Step Number -->
-                                <div
-                                    class="bg-accent-color text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto relative z-10">
-                                    3
-                                </div>
-
-                                <!-- Icon -->
-                                <div class="mb-6">
-                                    <svg class="w-16 h-16 mx-auto text-secondary-color" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                                    </svg>
-                                </div>
-
-                                <!-- Content -->
-                                <h3 class="text-xl font-semibold text-primary-color mb-3">
-                                    Work Begins Instantly
-                                </h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">
-                                    Your virtual team starts working immediately on your projects with full dedication.
-                                </p>
+        
+                        <!-- FAQ Item 3 -->
+                        <div class="collapse bg-white">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title font-poppins">
+                                How long do projects take?
+                            </div>
+                            <div class="collapse-content font-inter">
+                                <p>Simple websites take 2-4 weeks, while complex applications may require 6-12 weeks. We provide
+                                    detailed timelines during consultation.</p>
                             </div>
                         </div>
-
-                        <!-- Step 4: Ongoing Support & Reporting -->
-                        <div
-                            class="process-card relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
-                            <div class="text-center">
-                                <!-- Step Number -->
-                                <div
-                                    class="bg-accent-color text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto relative z-10">
-                                    4
-                                </div>
-
-                                <!-- Icon -->
-                                <div class="mb-6">
-                                    <svg class="w-16 h-16 mx-auto text-secondary-color" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
-                                    </svg>
-                                </div>
-
-                                <!-- Content -->
-                                <h3 class="text-xl font-semibold text-primary-color mb-3">
-                                    Ongoing Support & Reporting
-                                </h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">
-                                    Receive continuous support with regular progress reports and performance updates.
-                                </p>
+        
+                        <!-- FAQ Item 4 -->
+                        <div class="collapse bg-white">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title font-poppins">
+                                Can I change my subscription plan?
+                            </div>
+                            <div class="collapse-content font-inter">
+                                <p>Yes, you can upgrade or downgrade anytime. Upgrades take effect immediately, while downgrades
+                                    apply at the next billing cycle.</p>
                             </div>
                         </div>
+                    </div>
+        
+                    <!-- Right Column -->
+                    <div>
+                        <!-- FAQ Item 5 -->
+                        <div class="collapse bg-white">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title font-poppins">
+                                What technologies do you use?
+                            </div>
+                            <div class="collapse-content font-inter">
+                                <p>We work with React.js, Node.js, PHP, WordPress, WooCommerce, and modern web technologies. We
+                                    stay updated with industry best practices.</p>
+                            </div>
+                        </div>
+        
+                        <!-- FAQ Item 6 -->
+                        <div class="collapse bg-white">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title font-poppins">
+                                Do you provide ongoing support?
+                            </div>
+                            <div class="collapse-content font-inter">
+                                <p>Yes, all plans include ongoing support via email, chat, or phone. We handle updates,
+                                    security, and technical assistance.</p>
+                            </div>
+                        </div>
+        
+                        <!-- FAQ Item 7 -->
+                        <div class="collapse bg-white">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title font-poppins">
+                                How do you ensure quality?
+                            </div>
+                            <div class="collapse-content font-inter">
+                                <p>We follow rigorous testing, code reviews, and industry best practices. Our experienced team
+                                    ensures every project meets high standards.</p>
+                            </div>
+                        </div>
+        
+                        <!-- FAQ Item 8 -->
+                        <div class="collapse bg-white">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title font-poppins">
+                                Do you offer custom solutions?
+                            </div>
+                            <div class="collapse-content font-inter">
+                                <p>Absolutely! We create custom pricing and solutions for unique requirements. Contact us to
+                                    discuss your specific needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Contact CTA -->
+                <div class="contact-cta max-w-3xl mx-auto">
+                    <h3 class="text-xl font-bold font-poppins text-primary-color mb-3">
+                        Have More Questions?
+                    </h3>
+                    <p class="text-gray-600 font-inter mb-6">
+                        Get in touch with our team for personalized answers and free consultation.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="/contact-us.html" class="btn bg-accent-color hover:bg-blue-600 text-white border-none font-semibold font-inter px-3">
+                            Contact Support
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <!--======================================= How It Works Section =======================================-->
-
-
-        <!--======================================= Indutry We Serve Section =======================================-->
-        <section class="home-industry-section py-20 bg-white font-poppins">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl lg:text-5xl font-bold text-primary-color mb-6">
-                        Who We <span class="text-accent-color">Help</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        We understand your unique business needs and provide tailored virtual staffing solutions across
-                        various
-                        industries.
-                    </p>
-                </div>
-
-                <!-- Industries Grid - New Layout -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-
-                    <!-- Left Column - Featured Industries -->
-                    <div class="space-y-8">
-
-                        <!-- Startups -->
-                        <div
-                            class="industry-card group bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-accent-color">
-                            <div class="flex items-center gap-6">
-                                <div
-                                    class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
-                                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                                        alt="Startups" class="w-12 h-12 rounded-lg object-cover">
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-2xl font-semibold text-primary-color mb-2">
-                                        Startups
-                                    </h3>
-                                    <p class="text-gray-600 leading-relaxed">
-                                        Scale your startup with cost-effective virtual talent to accelerate growth and
-                                        reduce
-                                        operational costs.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Small Businesses -->
-                        <div
-                            class="industry-card group bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-secondary-color">
-                            <div class="flex items-center gap-6">
-                                <div
-                                    class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                                        alt="Small Businesses" class="w-12 h-12 rounded-lg object-cover">
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-2xl font-semibold text-primary-color mb-2">
-                                        Small Businesses
-                                    </h3>
-                                    <p class="text-gray-600 leading-relaxed">
-                                        Expand your team capabilities without the overhead of full-time employees and
-                                        complex HR
-                                        processes.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- eCommerce Owners -->
-                        <div
-                            class="industry-card group bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-accent-color">
-                            <div class="flex items-center gap-6">
-                                <div
-                                    class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
-                                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                                        alt="eCommerce Owners" class="w-12 h-12 rounded-lg object-cover">
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-2xl font-semibold text-primary-color mb-2">
-                                        eCommerce Owners
-                                    </h3>
-                                    <p class="text-gray-600 leading-relaxed">
-                                        Manage your online store with dedicated support for operations, customer
-                                        service, and
-                                        marketing.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column - Featured Industries -->
-                    <div class="space-y-8">
-
-                        <!-- Content Creators -->
-                        <div
-                            class="industry-card group bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-8 border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-secondary-color">
-                            <div class="flex items-center gap-6">
-                                <div
-                                    class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
-                                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                                        alt="Content Creators" class="w-12 h-12 rounded-lg object-cover">
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-2xl font-semibold text-primary-color mb-2">
-                                        Content Creators
-                                    </h3>
-                                    <p class="text-gray-600 leading-relaxed">
-                                        Focus on creating while we handle editing, social media management, and
-                                        administrative
-                                        tasks.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Agencies -->
-                        <div
-                            class="industry-card group bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-8 border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-accent-color">
-                            <div class="flex items-center gap-6">
-                                <div
-                                    class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
-                                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                                        alt="Agencies" class="w-12 h-12 rounded-lg object-cover">
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-2xl font-semibold text-primary-color mb-2">
-                                        Agencies
-                                    </h3>
-                                    <p class="text-gray-600 leading-relaxed">
-                                        Scale your agency services with skilled virtual professionals for complex client
-                                        projects.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Call to Action Card -->
-                        <div class="bg-primary-color rounded-2xl p-8 text-center">
-                            <h3 class="text-2xl font-semibold text-white mb-4">
-                                Don't See Your Industry?
-                            </h3>
-                            <p class="text-blue-100 mb-6 leading-relaxed">
-                                We work with businesses across all sectors. Let's discuss your specific needs.
-                            </p>
-                            <button
-                                class="bg-accent-color hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300">
-                                Get Custom Solution
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bottom Stats Section -->
-                <div class="bg-gray-50 rounded-2xl p-12">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div>
-                            <div class="text-4xl font-bold text-accent-color mb-2">500+</div>
-                            <div class="text-gray-600 font-medium">Businesses Served</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-bold text-secondary-color mb-2">50+</div>
-                            <div class="text-gray-600 font-medium">Industries Covered</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-bold text-accent-color mb-2">98%</div>
-                            <div class="text-gray-600 font-medium">Client Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--======================================= Indutry We Serve Section =======================================-->
-
-
-        <!--======================================= Blogs Section =======================================-->
-        <section class="home-blog-section py-20 bg-gray-50 font-poppins">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl lg:text-5xl font-bold text-primary-color mb-6">
-                        Latest <span class="text-accent-color">Resources</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Stay updated with expert insights, tips, and strategies to maximize your virtual team's
-                        potential and
-                        grow your business.
-                    </p>
-                </div>
-
-                <!-- Blog Posts Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-
-                    <!-- Blog Post 1: Virtual Assistant Time Savings -->
-                    <article
-                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
-                        <div class="aspect-w-16 aspect-h-10">
-                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                alt="Virtual Assistant Time Management" class="w-full h-56 object-cover">
-                        </div>
-                        <div class="p-8">
-                            <!-- Category Badge -->
-                            <div
-                                class="inline-block bg-purple-500 bg-opacity-10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                                Productivity
-                            </div>
-
-                            <!-- Title -->
-                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
-                                5 Ways a Virtual Assistant Saves You Time
-                            </h3>
-
-                            <!-- Excerpt -->
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Discover how delegating routine tasks to a virtual assistant can free up hours in your
-                                day and
-                                boost your business productivity.
-                            </p>
-
-                            <!-- Meta Info -->
-                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
-                                <span class="flex items-center gap-2">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    5 min read
-                                </span>
-                                <span>Jan 15, 2025</span>
-                            </div>
-
-                            <!-- Read More Link -->
-                            <a href="#"
-                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
-                                Read More
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Post 2: Website Maintenance -->
-                    <article
-                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
-                        <div class="aspect-w-16 aspect-h-10">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                alt="Website Maintenance and Development" class="w-full h-56 object-cover">
-                        </div>
-                        <div class="p-8">
-                            <!-- Category Badge -->
-                            <div
-                                class="inline-block bg-purple-500 bg-opacity-10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                                Web Development
-                            </div>
-
-                            <!-- Title -->
-                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
-                                Top Website Maintenance Tips for 2025
-                            </h3>
-
-                            <!-- Excerpt -->
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Keep your website running smoothly and securely with these essential maintenance
-                                practices and
-                                expert recommendations.
-                            </p>
-
-                            <!-- Meta Info -->
-                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
-                                <span class="flex items-center gap-2">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    7 min read
-                                </span>
-                                <span>Jan 12, 2025</span>
-                            </div>
-
-                            <!-- Read More Link -->
-                            <a href="#"
-                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
-                                Read More
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Post 3: Social Media Engagement -->
-                    <article
-                        class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
-                        <div class="aspect-w-16 aspect-h-10">
-                            <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                alt="Social Media Marketing Strategy" class="w-full h-56 object-cover">
-                        </div>
-                        <div class="p-8">
-                            <!-- Category Badge -->
-                            <div
-                                class="inline-block bg-purple-500 bg-opacity-10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                                Social Media
-                            </div>
-
-                            <!-- Title -->
-                            <h3 class="text-xl font-bold text-primary-color mb-3 leading-tight">
-                                How to Boost Social Media Engagement
-                            </h3>
-
-                            <!-- Excerpt -->
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Learn proven strategies and tactics to increase your social media engagement and build a
-                                loyal
-                                community around your brand.
-                            </p>
-
-                            <!-- Meta Info -->
-                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
-                                <span class="flex items-center gap-2">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    6 min read
-                                </span>
-                                <span>Jan 10, 2025</span>
-                            </div>
-
-                            <!-- Read More Link -->
-                            <a href="#"
-                                class="read-more inline-flex items-center text-secondary-color font-semibold transition-colors duration-300">
-                                Read More
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- View All Blog Button -->
-                <div class="text-center">
-                    <a href="#"
-                        class="inline-flex items-center bg-white border-2 border-accent-color text-accent-color font-semibold px-8 py-4 rounded-xl hover:bg-accent-color hover:text-white transition-all duration-300">
-                        View All Articles
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!--======================================= Blogs Section =======================================-->
+        <!-- ======================================= FAQ Section ======================================= -->
 
 
         <!--======================================= CTA Section =======================================-->

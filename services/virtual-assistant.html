@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Staff - Hire the Best</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="bg-white sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="navbar min-h-[80px] px-0">
+                <!-- Logo -->
+                <div class="navbar-start">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-accent-color rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-secondary-color">Online Staff</h1>
+                            <p class="text-xs text-gray-500">Future of Work</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-base font-medium">
+                        <li><a href="/" class="text-secondary-color hover:text-primary-color transition-colors">HOME</a>
+                        </li>
+                        <li><a href="/about-us.html"
+                                class="text-secondary-color hover:text-primary-color transition-colors">ABOUT
+                                US</a>
+                        </li>
+
+                        <!-- Services Dropdown -->
+                        <li class="dropdown dropdown-hover">
+                            <a href="/services.html"
+                                class="active-link transition-colors">
+                                SERVICES <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <ul class="dropdown-content menu p-2 shadow-lg bg-white rounded-box w-64 mt-2">
+                                <li><a href="#" class="hover:bg-gray-100">Virtual Assistants</a></li>
+                                <li><a href="#" class="hover:bg-gray-100">Content Writers</a></li>
+                                <li><a href="#" class="hover:bg-gray-100">Web Developers</a></li>
+                                <li><a href="#" class="hover:bg-gray-100">Digital Marketing</a></li>
+                                <li><a href="#" class="hover:bg-gray-100">Data Entry</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="/resources.html" class=" text-secondary-color hover:text-primary-color transition-colors">RESOURCES</a>
+                        </li>
+                        <li><a href="/contact-us.html"
+                                class="text-secondary-color hover:text-primary-color transition-colors">CONTACT
+                                US</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA Button & Mobile Menu -->
+                <div class="navbar-end">
+                    <a href="/contact-us.html"
+                        class="btn bg-accent-color hover:bg-pink-600 text-white border-0 hidden md:inline-flex mr-4">
+                        SEND US YOUR REQUIREMENT
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="dropdown dropdown-end lg:hidden">
+                        <label tabindex="0" class="btn btn-ghost" onclick="toggleMobileMenu()">
+                            <i class="fas fa-bars text-xl"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="mobile-menu bg-white border-t lg:hidden">
+            <div class="container mx-auto px-4 py-4">
+                <ul class="space-y-2">
+                    <li><a href="/"
+                            class="block py-2 text-secondary-color hover:text-primary-color transition-colors">HOME</a>
+                    </li>
+                    <li><a href="/about-us.html"
+                            class="block py-2 text-secondary-color hover:text-primary-color transition-colors">ABOUT
+                            US</a></li>
+                    <li>
+                        <div class="collapse collapse-arrow">
+                            <input type="checkbox" />
+                            <div
+                                class="collapse-title py-2 text-secondary-color hover:text-primary-color transition-colors min-h-0 px-0">
+                                SERVICES
+                            </div>
+                            <div class="collapse-content px-4">
+                                <ul class="space-y-1">
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Virtual
+                                            Assistants</a></li>
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Content
+                                            Writers</a></li>
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Web
+                                            Developers</a></li>
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Digital
+                                            Marketing</a></li>
+                                    <li><a href="#"
+                                            class="block py-1 text-sm text-gray-600 hover:text-primary-color">Data
+                                            Entry</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/resources.html"
+                            class="block py-2 text-secondary-color hover:text-primary-color transition-colors">RESOURCES</a>
+                    </li>
+                    <li><a href="/contact-us.html"
+                            class="block py-2 text-secondary-color hover:text-primary-color transition-colors">CONTACT
+                            US</a></li>
+                    <li class="pt-4">
+                        <a href="/contact-us.html"
+                            class="btn bg-accent-color hover:bg-pink-600 text-white border-0 w-full">
+                            SEND US YOUR REQUIREMENT
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Contact Info -->
+                <div class="mt-6 pt-4 border-t border-gray-200">
+                    <div class="space-y-2 text-sm">
+                        <p class="flex items-center text-gray-600">
+                            <i class="fas fa-envelope mr-2 text-accent-color"></i>
+                            info@onlinestaff.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <!-- ======================================= Banner Section ======================================= -->
+        <section class="service-banner va-banner py-12 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <!-- Breadcrumb -->
+                <nav class="mb-4">
+                    <ol class="flex items-center space-x-2 text-sm text-gray-200">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li class="text-gray-400">/</li>
+                        <li><a href="#" class="hover:text-white transition-colors">Services</a></li>
+                        <li class="text-gray-400">/</li>
+                        <li class="text-white font-medium">Virtual Assistant</li>
+                    </ol>
+                </nav>
+        
+                <!-- Service Title -->
+                <div>
+                    <h1 class="font-poppins font-bold text-4xl md:text-5xl text-white leading-tight">
+                        Virtual Assistant Services
+                    </h1>
+                    <p class="font-inter text-lg text-gray-200 mt-3 max-w-2xl">
+                        Professional administrative support to help you focus on what matters most
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- ======================================= Banner Section ======================================= -->
+
+
+        <!--======================================= Service Details Section =======================================-->
+            <div class="va-service-details">
+            
+                <!-- Hero Section with Service Overview -->
+                <section class="gradient-bg py-20 px-4 relative overflow-hidden">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+                            <!-- Left Content -->
+                            <div class="space-y-8">
+                                <div class="space-y-6">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="pulse-dot w-3 h-3 bg-accent-color rounded-full"></div>
+                                        <span
+                                            class="font-inter text-accent-color font-semibold uppercase tracking-wider text-sm">Premium
+                                            Service</span>
+                                    </div>
+            
+                                    <h1 class="font-poppins font-bold text-5xl lg:text-6xl text-gradient leading-tight">
+                                        Professional Virtual Assistant Services
+                                    </h1>
+            
+                                    <p class="font-inter text-xl text-gray-600 leading-relaxed">
+                                        Streamline your business operations with our expert virtual assistants. From
+                                        administrative tasks to specialized support, we help you focus on what matters most
+                                        while we handle the rest.
+                                    </p>
+                                </div>
+            
+                                <!-- Key Stats -->
+                                <div class="grid grid-cols-3 gap-6">
+                                    <div class="stats-card text-center py-6 px-4 rounded-xl text-white">
+                                        <div class="font-poppins font-bold text-3xl">500+</div>
+                                        <div class="font-inter text-sm opacity-90">Projects Done</div>
+                                    </div>
+                                    <div class="stats-card text-center py-6 px-4 rounded-xl text-white">
+                                        <div class="font-poppins font-bold text-3xl">24/7</div>
+                                        <div class="font-inter text-sm opacity-90">Availability</div>
+                                    </div>
+                                    <div class="stats-card text-center py-6 px-4 rounded-xl text-white">
+                                        <div class="font-poppins font-bold text-3xl">98%</div>
+                                        <div class="font-inter text-sm opacity-90">Client Satisfaction</div>
+                                    </div>
+                                </div>
+            
+                                <!-- CTA Buttons -->
+                                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                                    <button class="cta-button px-8 py-4 text-white font-poppins font-semibold rounded-xl">
+                                        Get Started Today
+                                    </button>
+                                    <button
+                                        class="border-2 border-primary-color text-primary-color px-8 py-4 font-poppins font-semibold rounded-xl hover:bg-primary-color hover:text-white transition-all duration-300">
+                                        View Portfolio
+                                    </button>
+                                </div>
+                            </div>
+            
+                            <!-- Right Image -->
+                            <div class="relative">
+                                <div class="floating-card p-4 rounded-2xl">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2088&q=80"
+                                        alt="Professional Virtual Assistant" class="w-full h-96 object-cover rounded-xl shadow-2xl">
+                                </div>
+            
+                                <!-- Floating Elements -->
+                                <div class="absolute -top-6 -right-6 bg-accent-color text-white p-4 rounded-xl shadow-lg">
+                                    <div class="text-2xl font-bold">⏰</div>
+                                    <div class="text-xs">Time Saved</div>
+                                </div>
+            
+                                <div class="absolute -bottom-6 -left-6 bg-secondary-color text-white p-4 rounded-xl shadow-lg">
+                                    <div class="text-2xl font-bold">📊</div>
+                                    <div class="text-xs">Efficiency Boost</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- Services We Offer -->
+                <section class="py-20 px-4 bg-white">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="text-center mb-16">
+                            <h2 class="font-poppins font-bold text-4xl text-primary-color mb-6">
+                                What Our Virtual Assistants Can Do
+                            </h2>
+                            <p class="font-inter text-xl text-gray-600 max-w-3xl mx-auto">
+                                Our skilled virtual assistants provide comprehensive support across multiple business areas
+                            </p>
+                        </div>
+            
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Service Card 1 -->
+                            <div class="service-card p-8 rounded-2xl">
+                                <div class="icon-wrapper w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-poppins font-bold text-xl text-primary-color mb-4">Administrative Tasks</h3>
+                                <p class="text-gray-600 mb-4">Email management, scheduling, calendar organization, and document
+                                    preparation.</p>
+                                <ul class="space-y-2 text-sm text-gray-500">
+                                    <li>• Email filtering & responses</li>
+                                    <li>• Calendar scheduling</li>
+                                    <li>• Document formatting</li>
+                                    <li>• Travel arrangements</li>
+                                </ul>
+                            </div>
+            
+                            <!-- Service Card 2 -->
+                            <div class="service-card p-8 rounded-2xl">
+                                <div class="icon-wrapper w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-poppins font-bold text-xl text-primary-color mb-4">Customer Support</h3>
+                                <p class="text-gray-600 mb-4">Professional customer service and support across multiple
+                                    channels.</p>
+                                <ul class="space-y-2 text-sm text-gray-500">
+                                    <li>• Live chat support</li>
+                                    <li>• Help desk management</li>
+                                    <li>• Customer inquiries</li>
+                                    <li>• Order processing</li>
+                                </ul>
+                            </div>
+            
+                            <!-- Service Card 3 -->
+                            <div class="service-card p-8 rounded-2xl">
+                                <div class="icon-wrapper w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-poppins font-bold text-xl text-primary-color mb-4">Data Management</h3>
+                                <p class="text-gray-600 mb-4">Accurate data entry, research, and database management services.
+                                </p>
+                                <ul class="space-y-2 text-sm text-gray-500">
+                                    <li>• Data entry & processing</li>
+                                    <li>• Market research</li>
+                                    <li>• Lead generation</li>
+                                    <li>• Database cleanup</li>
+                                </ul>
+                            </div>
+            
+                            <!-- Service Card 4 -->
+                            <div class="service-card p-8 rounded-2xl">
+                                <div class="icon-wrapper w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2h4a1 1 0 110 2h-1v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6H3a1 1 0 110-2h4zM9 3v1h6V3H9zm2 5a1 1 0 112 0v8a1 1 0 11-2 0V8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-poppins font-bold text-xl text-primary-color mb-4">Social Media</h3>
+                                <p class="text-gray-600 mb-4">Social media management, content scheduling, and engagement.</p>
+                                <ul class="space-y-2 text-sm text-gray-500">
+                                    <li>• Content scheduling</li>
+                                    <li>• Community management</li>
+                                    <li>• Social media strategy</li>
+                                    <li>• Analytics reporting</li>
+                                </ul>
+                            </div>
+            
+                            <!-- Service Card 5 -->
+                            <div class="service-card p-8 rounded-2xl">
+                                <div class="icon-wrapper w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-poppins font-bold text-xl text-primary-color mb-4">Financial Tasks</h3>
+                                <p class="text-gray-600 mb-4">Bookkeeping, invoicing, and basic financial administration.</p>
+                                <ul class="space-y-2 text-sm text-gray-500">
+                                    <li>• Invoice creation</li>
+                                    <li>• Expense tracking</li>
+                                    <li>• Basic bookkeeping</li>
+                                    <li>• Payment follow-ups</li>
+                                </ul>
+                            </div>
+            
+                            <!-- Service Card 6 -->
+                            <div class="service-card p-8 rounded-2xl">
+                                <div class="icon-wrapper w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-poppins font-bold text-xl text-primary-color mb-4">Content Creation</h3>
+                                <p class="text-gray-600 mb-4">Blog writing, content research, and marketing material creation.
+                                </p>
+                                <ul class="space-y-2 text-sm text-gray-500">
+                                    <li>• Blog post writing</li>
+                                    <li>• Content research</li>
+                                    <li>• Newsletter creation</li>
+                                    <li>• Marketing copy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- Why Choose Us -->
+                <section class="py-20 px-4 gradient-bg">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="text-center mb-16">
+                            <h2 class="font-poppins font-bold text-4xl text-primary-color mb-6">
+                                Why Choose Our Virtual Assistants?
+                            </h2>
+                            <p class="font-inter text-xl text-gray-600 max-w-3xl mx-auto">
+                                Experience the difference with our professional, reliable, and skilled virtual assistant
+                                services
+                            </p>
+                        </div>
+            
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <!-- Left Features List -->
+                            <div class="space-y-8">
+                                <div class="feature-item bg-white p-6 rounded-xl shadow-lg">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="bg-accent-color rounded-lg p-3 flex-shrink-0">
+                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-poppins font-semibold text-xl text-primary-color mb-2">Rigorous
+                                                Screening</h3>
+                                            <p class="text-gray-600">All our VAs go through a comprehensive screening process
+                                                including skills assessment, background checks, and language proficiency tests.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="feature-item bg-white p-6 rounded-xl shadow-lg">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="bg-secondary-color rounded-lg p-3 flex-shrink-0">
+                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-poppins font-semibold text-xl text-primary-color mb-2">Flexible
+                                                Hours</h3>
+                                            <p class="text-gray-600">Work with VAs across different time zones to ensure 24/7
+                                                coverage for your business operations and customer support needs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="feature-item bg-white p-6 rounded-xl shadow-lg">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="bg-accent-color rounded-lg p-3 flex-shrink-0">
+                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-poppins font-semibold text-xl text-primary-color mb-2">Quick
+                                                Turnaround</h3>
+                                            <p class="text-gray-600">Get your projects completed efficiently with our commitment
+                                                to fast delivery without compromising on quality.</p>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="feature-item bg-white p-6 rounded-xl shadow-lg">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="bg-secondary-color rounded-lg p-3 flex-shrink-0">
+                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-poppins font-semibold text-xl text-primary-color mb-2">Data Security
+                                            </h3>
+                                            <p class="text-gray-600">Your business information is protected with
+                                                enterprise-level security measures and strict confidentiality agreements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Right Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2084&q=80"
+                                    alt="Professional Team" class="w-full h-96 object-cover rounded-2xl shadow-2xl">
+            
+                                <!-- Success Badge -->
+                                <div
+                                    class="absolute top-6 right-6 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                                    ✓ 5000+ Hours Completed
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- Process Section -->
+                <section class="py-20 px-4 bg-white">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="text-center mb-16">
+                            <h2 class="font-poppins font-bold text-4xl text-primary-color mb-6">
+                                How It Works
+                            </h2>
+                            <p class="font-inter text-xl text-gray-600 max-w-3xl mx-auto">
+                                Getting started with our virtual assistant services is simple and straightforward
+                            </p>
+                        </div>
+            
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                            <!-- Step 1 -->
+                            <div class="process-step text-center">
+                                <div class="relative">
+                                    <div
+                                        class="bg-accent-color w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                                        1
+                                    </div>
+                                    <div class="process-line hidden md:block"></div>
+                                </div>
+                                <h3 class="font-poppins font-semibold text-xl text-primary-color mb-3">Consultation</h3>
+                                <p class="text-gray-600">We discuss your needs and requirements to understand your business
+                                    goals.</p>
+                            </div>
+            
+                            <!-- Step 2 -->
+                            <div class="process-step text-center">
+                                <div class="relative">
+                                    <div
+                                        class="bg-secondary-color w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                                        2
+                                    </div>
+                                    <div class="process-line hidden md:block"></div>
+                                </div>
+                                <h3 class="font-poppins font-semibold text-xl text-primary-color mb-3">VA Matching</h3>
+                                <p class="text-gray-600">We match you with the perfect virtual assistant based on your specific
+                                    requirements.</p>
+                            </div>
+            
+                            <!-- Step 3 -->
+                            <div class="process-step text-center">
+                                <div class="relative">
+                                    <div
+                                        class="bg-accent-color w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                                        3
+                                    </div>
+                                    <div class="process-line hidden md:block"></div>
+                                </div>
+                                <h3 class="font-poppins font-semibold text-xl text-primary-color mb-3">Onboarding</h3>
+                                <p class="text-gray-600">Quick setup process including tool access, training, and workflow
+                                    establishment.</p>
+                            </div>
+            
+                            <!-- Step 4 -->
+                            <div class="process-step text-center">
+                                <div
+                                    class="bg-secondary-color w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                                    4
+                                </div>
+                                <h3 class="font-poppins font-semibold text-xl text-primary-color mb-3">Get Results</h3>
+                                <p class="text-gray-600">Start receiving high-quality work and regular progress updates from
+                                    your VA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        <!--======================================= Service Details Section =======================================-->
+
+
+        <!-- ======================================= FAQ Section ======================================= -->
+
+        <!-- ======================================= FAQ Section ======================================= -->
+
+
+
+
+        <!--======================================= CTA Section =======================================-->
+        <section class="home-cta-section py-24 font-poppins relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <!-- Main Headline -->
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    Ready to Scale with
+                    <span class="text-accent-color">Expert Virtual Support?</span>
+                </h2>
+
+                <!-- Subheadline -->
+                <p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8 leading-relaxed">
+                    Join hundreds of successful businesses who've transformed their operations with our dedicated
+                    virtual teams.
+                    Start your journey today with a free consultation.
+                </p>
+
+                <!-- Benefits List -->
+                <div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-blue-100">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-accent-color" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-medium">No Setup Costs</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-accent-color" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-medium">24/7 Support</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-accent-color" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-medium">Money-Back Guarantee</span>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button
+                        class="cta-button bg-accent-color hover:bg-blue-600 text-white font-bold px-10 py-5 rounded-xl text-lg transition-all duration-300 shadow-lg">
+                        Schedule a Free Consultation
+                    </button>
+                    <button
+                        class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-color font-semibold px-8 py-4 rounded-xl transition-all duration-300">
+                        View Our Plans
+                    </button>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="mt-16 pt-8 border-t border-blue-400 border-opacity-30">
+                    <p class="text-blue-200 mb-6">Trusted by 500+ businesses worldwide</p>
+                    <div class="flex justify-center items-center gap-8 opacity-70">
+                        <!-- Trust badges or client logos would go here -->
+                        <div class="text-blue-200 text-sm">
+                            ⭐⭐⭐⭐⭐ 4.9/5 Client Rating
+                        </div>
+                        <div class="hidden sm:block w-px h-6 bg-blue-400"></div>
+                        <div class="text-blue-200 text-sm">
+                            💼 500+ Projects Completed
+                        </div>
+                        <div class="hidden sm:block w-px h-6 bg-blue-400"></div>
+                        <div class="text-blue-200 text-sm">
+                            🚀 98% Client Retention Rate
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-accent-color rounded-full opacity-5 -translate-y-48 translate-x-48">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-color rounded-full opacity-5 translate-y-32 -translate-x-32">
+            </div>
+        </section>
+        <!--======================================= CTA Section =======================================-->
+
+    </main>
+
+    <footer class="online-staff-footer bg-primary-color text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-accent-color rounded-lg flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold font-poppins">Online Staff</h3>
+                    </div>
+                    <p class="text-gray-300 font-inter text-sm leading-relaxed">
+                        Empowering businesses with reliable virtual assistance solutions. From web development to
+                        administrative tasks, we deliver excellence with trust.
+                    </p>
+                    <div class="mt-6 flex space-x-2">
+                        <button
+                            class="bg-accent-color text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors">
+                            Get Quote
+                        </button>
+                        <button
+                            class="border border-gray-600 text-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:border-accent-color hover:text-accent-color transition-colors">
+                            Free Audit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <div>
+                    <h4 class="text-lg font-semibold font-poppins mb-4">About Us</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Account Tiers
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold font-poppins mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Web Development Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Data Entry & Admin Tasks
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Ecommerce Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Social Media Assistance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Personal Virtual Assistant
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                WordPress Maintenance
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Partners & Quick Links Combined -->
+                <div>
+                    <h4 class="text-lg font-semibold font-poppins mb-4">Partners</h4>
+                    <ul class="space-y-3 mb-6">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                AI Website Monitor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Mydynamic VA
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Online Staff Team
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold font-poppins mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Pricing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Portfolio / Case Studies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 font-inter text-sm hover-accent transition-colors duration-200">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div
+                        class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 mb-4 md:mb-0">
+                        <p class="text-gray-400 font-inter text-sm">
+                            © 2025
+                            <a href="#" class="text-accent-color hover:text-blue-300 transition-colors">Online
+                                Staff</a>.
+                            All rights reserved.
+                        </p>
+                        <p class="text-gray-400 font-inter text-sm">
+                            Crafted with <span class="text-red-400">♥</span> for modern businesses
+                        </p>
+                    </div>
+
+                    <!-- Legal Links -->
+                    <div
+                        class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
+                        <a href="#"
+                            class="text-gray-400 font-inter text-sm hover-accent transition-colors duration-200">
+                            Privacy Policy
+                        </a>
+                        <a href="#"
+                            class="text-gray-400 font-inter text-sm hover-accent transition-colors duration-200">
+                            Terms and Conditions
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-400 font-inter text-sm">Follow us:</span>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.024-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.739.097.118.112.221.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.013C24.007 5.367 18.641.001 12.017.001z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-color transition-colors duration-200">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Main JS File -->
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>

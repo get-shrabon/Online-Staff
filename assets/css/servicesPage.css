@@ -1,0 +1,135 @@
+/* ================================== Banner Section CSS ============================= */
+.services-banner-section {
+	background: linear-gradient(
+		135deg,
+		var(--primary-color) 0%,
+		var(--secondary-color) 35%,
+		var(--accent-color) 100%
+	);
+	position: relative;
+	overflow: hidden;
+}
+
+.services-banner-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(
+			circle at 20% 50%,
+			rgba(255, 255, 255, 0.1) 0%,
+			transparent 50%
+		),
+		radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+		radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+	pointer-events: none;
+}
+
+.services-banner-section .banner-floating-shapes {
+	position: absolute;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.05);
+	animation: bannerFloat 6s ease-in-out infinite;
+}
+
+.services-banner-section .banner-floating-shapes:nth-child(1) {
+	width: 100px;
+	height: 100px;
+	top: 20%;
+	left: 10%;
+	animation-delay: 0s;
+}
+
+.services-banner-section .banner-floating-shapes:nth-child(2) {
+	width: 60px;
+	height: 60px;
+	top: 60%;
+	right: 15%;
+	animation-delay: 2s;
+}
+
+.services-banner-section .banner-floating-shapes:nth-child(3) {
+	width: 80px;
+	height: 80px;
+	bottom: 20%;
+	left: 20%;
+	animation-delay: 4s;
+}
+
+@keyframes bannerFloat {
+	0%,
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-20px) rotate(180deg);
+	}
+}
+
+.services-banner-section .banner-cta-button:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+}
+
+.services-banner-section .banner-hero-content {
+	position: relative;
+	z-index: 10;
+}
+
+.services-banner-section .banner-tech-grid {
+	position: absolute;
+	top: 50%;
+	right: -100px;
+	width: 400px;
+	height: 400px;
+	opacity: 0.03;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+	background-size: 30px 30px;
+	transform: translateY(-50%) rotate(15deg);
+}
+
+@media (max-width: 768px) {
+	.services-banner-section .banner-tech-grid {
+		display: none;
+	}
+}
+/* ================================== Banner Section CSS ============================= */
+
+/* ================================== FAQ Section CSS ============================= */
+.services-faq .collapse {
+	border: 1px solid #e5e7eb;
+	margin-bottom: 0.75rem;
+	border-radius: 0.75rem;
+	transition: all 0.2s ease;
+}
+.services-faq .collapse:hover {
+	border-color: var(--accent-color);
+}
+.services-faq .collapse-title {
+	background: #f8fafc;
+	color: var(--primary-color);
+	font-weight: 500;
+	padding: 1rem;
+	font-size: 0.9rem;
+}
+.services-faq .collapse-content {
+	background: white;
+	padding: 0 1rem 1rem;
+	color: #6b7280;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+.services-faq input:checked + .collapse-title {
+	background: var(--accent-color);
+	color: white;
+}
+.services-faq .contact-cta {
+	background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	text-align: center;
+}
+/* ================================== FAQ Section CSS ============================= */
