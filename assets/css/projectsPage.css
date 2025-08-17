@@ -1,0 +1,123 @@
+/* ============================ Banner Section CSS ============================ */
+.projects-page-banner {
+	background: linear-gradient(
+		135deg,
+		var(--primary-color) 0%,
+		var(--secondary-color) 100%
+	);
+	position: relative;
+	overflow: hidden;
+}
+
+.projects-page-banner::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url("https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")
+		center/cover;
+	opacity: 0.1;
+	z-index: 1;
+}
+
+.projects-page-banner .content-wrapper {
+	position: relative;
+	z-index: 2;
+}
+
+.projects-page-banner .floating-element {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	animation: float 6s ease-in-out infinite;
+}
+
+.projects-page-banner .floating-element:nth-child(1) {
+	top: 10%;
+	left: 10%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+}
+
+.projects-page-banner .floating-element:nth-child(2) {
+	top: 20%;
+	right: 15%;
+	width: 60px;
+	height: 60px;
+	animation-delay: 2s;
+}
+
+.projects-page-banner .floating-element:nth-child(3) {
+	bottom: 30%;
+	left: 8%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 4s;
+}
+
+.projects-page-banner .floating-element:nth-child(4) {
+	bottom: 15%;
+	right: 10%;
+	width: 70px;
+	height: 70px;
+	animation-delay: 1s;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	25% {
+		transform: translateY(-10px) rotate(5deg);
+	}
+	50% {
+		transform: translateY(-20px) rotate(0deg);
+	}
+	75% {
+		transform: translateY(-10px) rotate(-5deg);
+	}
+}
+
+.projects-page-banner .grid-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+	background-size: 50px 50px;
+	z-index: 1;
+}
+
+.projects-page-banner .highlight-text {
+	background: linear-gradient(135deg, var(--accent-color), #00d4ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.projects-page-banner .stats-card {
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+}
+
+.projects-page-banner .stats-card:hover {
+	background: rgba(255, 255, 255, 0.12);
+	transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+	.projects-page-banner .floating-element {
+		display: none;
+	}
+}
+/* ============================ Banner Section CSS ============================ */

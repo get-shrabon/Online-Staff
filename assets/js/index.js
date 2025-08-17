@@ -263,3 +263,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // ========================= Home Banner 2 JS ============================
+
+

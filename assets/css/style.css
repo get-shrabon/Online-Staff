@@ -56,6 +56,33 @@ body {
 	animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Accent Gradient */
+.bg-gradient-accent {
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(var(--accent-color), 0.05),
+		rgba(var(--accent-color), 0.1)
+	) !important;
+}
+
+/* Secondary Gradient */
+.bg-gradient-secondary {
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(var(--secondary-color), 0.05),
+		rgba(var(--secondary-color), 0.1)
+	) !important;
+}
+
+/* Primary Gradient */
+.bg-gradient-primary {
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(var(--primary-color), 0.05),
+		rgba(var(--primary-color), 0.1)
+	) !important;
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -65,7 +92,52 @@ body {
 	}
 }
 
+
+/* ================================== FAQ Section CSS ============================= */
+.services-faq .collapse {
+	border: 1px solid #e5e7eb;
+	margin-bottom: 0.75rem;
+	border-radius: 0.75rem;
+	transition: all 0.2s ease;
+}
+.services-faq .collapse:hover {
+	border-color: var(--accent-color);
+}
+.services-faq .collapse-title {
+	background: #f8fafc;
+	color: var(--primary-color);
+	font-weight: 500;
+	padding: 1rem;
+	font-size: 0.9rem;
+}
+.services-faq .collapse-content {
+	background: white;
+	padding: 0 1rem 1rem;
+	color: #6b7280;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+.services-faq input:checked + .collapse-title {
+	background: var(--accent-color);
+	color: white;
+}
+.services-faq .contact-cta {
+	background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	text-align: center;
+}
+/* ================================== FAQ Section CSS ============================= */
+
 /* ============================= Header CSS ============================= */
+
+header .menu-horizontal{
+	gap: 10px;
+}
+header .menu-horizontal li a{
+	color: black;
+}
+
 .dropdown-content {
 	opacity: 0;
 	transform: translateY(10px);
@@ -89,8 +161,8 @@ body {
 }
 
 .active-link {
-	background-color: var(--primary-color) !important;
-	color: white !important;
+	background-color: #cdcdcd !important;
+	color: rgb(0, 0, 0) !important;
 }
 
 /* Sticky header shadow */
@@ -745,7 +817,6 @@ body {
 
 .pricing-section .popular-badge {
 	background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-	animation: pulse 2s infinite;
 }
 
 .pricing-section .popular-card {
@@ -1462,6 +1533,72 @@ body {
 	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
 		url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80");
 }
+.dm-details-section .service-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		135deg,
+		rgba(13, 42, 77, 0.05) 0%,
+		rgba(21, 111, 135, 0.05) 50%,
+		rgba(31, 162, 255, 0.05) 100%
+	);
+	z-index: -1;
+	transition: all 0.3s ease;
+}
+
+.dm-details-section .service-card:hover::before {
+	background: linear-gradient(
+		135deg,
+		rgba(13, 42, 77, 0.1) 0%,
+		rgba(21, 111, 135, 0.1) 50%,
+		rgba(31, 162, 255, 0.1) 100%
+	);
+}
+
+.dm-details-section .process-step:last-child::after {
+	display: none;
+}
+
+.dm-details-section .hero-pattern {
+	background-image: radial-gradient(
+			circle at 25% 25%,
+			rgba(31, 162, 255, 0.1) 0%,
+			transparent 50%
+		),
+		radial-gradient(circle at 75% 75%, rgba(21, 111, 135, 0.1) 0%, transparent 50%);
+}
+
+@media (max-width: 768px) {
+	.dm-details-section .process-step::after {
+		display: none;
+	}
+}
+
+.dm-stats .state-card {
+	background-image: linear-gradient(
+		135deg,
+		rgba(13, 42, 77, 0.1),
+		rgba(21, 111, 135, 0.1)
+	);
+}
+.dm-stats .state-card:nth-child(1) {
+	background-image: linear-gradient(
+		135deg,
+		rgba(77, 13, 13, 0.1),
+		rgba(129, 135, 21, 0.1)
+	);
+}
+.dm-stats .state-card:nth-child(4) {
+	background-image: linear-gradient(
+		135deg,
+		rgba(77, 13, 13, 0.1),
+		rgba(129, 135, 21, 0.1)
+	);
+}
 /* ========================= Digital Marketing Service Page ======================== */
 
 /* ========================= Data Entry Service Page ======================== */
@@ -1469,4 +1606,141 @@ body {
 	background-image: linear-gradient(rgba(13, 42, 77, 0.8), rgba(21, 111, 135, 0.8)),
 		url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80");
 }
+
+.de-details-section .hexagon-card {
+	position: relative;
+	clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+	background: linear-gradient(135deg, rgba(31, 162, 255, 0.1), rgba(21, 111, 135, 0.1));
+}
+
+.de-details-section .wave-pattern {
+	background-image: url("data:image/svg+xml,%3csvg width='100' height='20' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m0 20c20 0 20-20 40-20s20 20 40 20 20-20 40-20 20 20 40 20v0h-160z' fill='%23f3f4f6'/%3e%3c/svg%3e");
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.de-details-section .service-item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 100%;
+	background: linear-gradient(180deg, var(--accent-color), var(--secondary-color));
+	border-radius: 2px;
+	transform: scaleY(0);
+	transition: transform 0.3s ease;
+}
+
+.de-details-section .service-item:hover::before {
+	transform: scaleY(1);
+}
+
+.de-details-section .floating-element {
+	animation: float 6s ease-in-out infinite;
+}
+
+.de-details-section .floating-element:nth-child(odd) {
+	animation-delay: -3s;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+.de-details-section .diamond-shape {
+	transform: rotate(45deg);
+	border-radius: 8px;
+}
+
+.de-details-section .diamond-content {
+	transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+	.de-details-section .hexagon-card {
+		clip-path: none;
+		border-radius: 1rem;
+	}
+}
 /* ========================= Data Entry Service Page ======================== */
+
+/* ========================= Ecommerce Store Service Page ======================== */
+.eco-details-section .gradient-overlay {
+	background: linear-gradient(
+		135deg,
+		rgba(13, 42, 77, 0.9) 0%,
+		rgba(21, 111, 135, 0.8) 100%
+	);
+}
+
+.eco-details-section .service-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		45deg,
+		transparent 0%,
+		rgba(31, 162, 255, 0.1) 50%,
+		transparent 100%
+	);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.eco-details-section .service-card:hover::before {
+	opacity: 1;
+}
+
+.eco-details-section .process-step::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: -20px;
+	width: 40px;
+	height: 2px;
+	background: linear-gradient(90deg, var(--accent-color), transparent);
+	transform: translateY(-50%);
+}
+
+.eco-details-section .process-step:last-child::after {
+	display: none;
+}
+
+.eco-details-section .floating-element {
+	animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+.eco-details-section .hero-image {
+	clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+@media (max-width: 768px) {
+	.eco-details-section .hero-image {
+		clip-path: none;
+	}
+
+	.eco-details-section .process-step::after {
+		display: none;
+	}
+}
+/* ========================= Ecommerce Store Service Page ======================== */
