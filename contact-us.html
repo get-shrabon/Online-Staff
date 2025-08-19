@@ -30,7 +30,9 @@
     <meta property="twitter:image" content="https://onlinestaff.com/assets/images/contact-og.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -52,7 +54,8 @@
                             <i class="fas fa-users text-white text-xl"></i>
                         </div>
                         <div>
-                            <h1 class="text-2xl font-bold text-secondary-color">Online Staff</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold text-secondary-color">Online Staff</h1>
+
                             <p class="text-xs text-gray-500">Future of Work</p>
                         </div>
                     </div>
@@ -105,10 +108,10 @@
                     </a>
 
                     <!-- Mobile Menu Button -->
-                    <div class="dropdown dropdown-end lg:hidden">
-                        <label tabindex="0" class="btn btn-ghost" onclick="toggleMobileMenu()">
+                    <div class="lg:hidden">
+                        <button class="btn btn-ghost" id="mobileMenuToggle">
                             <i class="fas fa-bars text-xl"></i>
-                        </label>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -416,9 +419,11 @@
                                 <input type="checkbox" id="consent" name="consent" required
                                     class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
                                 <label for="consent" class="text-sm text-gray-600 leading-5">
-                                    I agree to the <a href="#" class="text-accent-color hover:underline">Privacy
+                                    I agree to the <a href="/privacy-policy.html"
+                                        class="text-accent-color hover:underline">Privacy
                                         Policy</a> and
-                                    <a href="#" class="text-accent-color hover:underline">Terms of Service</a>. *
+                                    <a href="/terms-of-service.html" class="text-accent-color hover:underline">Terms of
+                                        Service</a>. *
                                 </label>
                             </div>
 
@@ -460,14 +465,14 @@
                         administrative tasks, we deliver excellence with trust.
                     </p>
                     <div class="mt-6 flex space-x-2">
-                        <button
-                            class="bg-accent-color text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors">
+                        <a href="/contact-us.html"
+                            class="bg-accent-color text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors text-center">
                             Get Quote
-                        </button>
-                        <button
-                            class="border border-gray-600 text-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:border-accent-color hover:text-accent-color transition-colors">
+                        </a>
+                        <a href="/contact-us.html"
+                            class="border border-gray-600 text-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:border-accent-color hover:text-accent-color transition-colors text-center">
                             Free Audit
-                        </button>
+                        </a>
                     </div>
                 </div>
 

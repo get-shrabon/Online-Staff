@@ -105,6 +105,14 @@
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 }
+
+/* Big Screen Styles */
+@media (min-width: 1024px) {
+	.about-story .story_img {
+		height: 600px !important;
+	}
+}
+
 /* ========================== Story Section CSS ========================== */
 
 /* ========================== Mission Vision Section CSS ========================== */

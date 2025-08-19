@@ -92,7 +92,6 @@ body {
 	}
 }
 
-
 /* ================================== FAQ Section CSS ============================= */
 .services-faq .collapse {
 	border: 1px solid #e5e7eb;
@@ -131,10 +130,10 @@ body {
 
 /* ============================= Header CSS ============================= */
 
-header .menu-horizontal{
+header .menu-horizontal {
 	gap: 10px;
 }
-header .menu-horizontal li a{
+header .menu-horizontal li a {
 	color: black;
 }
 
@@ -154,15 +153,38 @@ header .menu-horizontal li a{
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.3s ease;
+	opacity: 0;
 }
 
 .mobile-menu.active {
 	max-height: 500px;
+	opacity: 1;
+}
+
+/* Dropdown improvements */
+.dropdown:hover .dropdown-content,
+.dropdown.dropdown-open .dropdown-content,
+.dropdown-hover:hover .dropdown-content {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(25px);
+}
+
+.dropdown-content {
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(-10px);
+	transition: all 0.2s ease-in-out;
+}
+
+/* Ensure dropdown appears above other content */
+.dropdown-content {
+	z-index: 9999 !important;
 }
 
 .active-link {
-	background-color: #cdcdcd !important;
-	color: rgb(0, 0, 0) !important;
+	background-color: transparent !important;
+	color: var(--accent-color) !important;
 }
 
 /* Sticky header shadow */

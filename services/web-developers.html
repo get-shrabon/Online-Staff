@@ -30,7 +30,9 @@
     <meta property="twitter:image" content="https://onlinestaff.com/assets/images/webdev-og.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/images/favicon.png">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -50,7 +52,8 @@
                             <i class="fas fa-users text-white text-xl"></i>
                         </div>
                         <div>
-                            <h1 class="text-2xl font-bold text-secondary-color">Online Staff</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold text-secondary-color">Online Staff</h1>
+
                             <p class="text-xs text-gray-500">Future of Work</p>
                         </div>
                     </div>
@@ -103,10 +106,10 @@
                     </a>
 
                     <!-- Mobile Menu Button -->
-                    <div class="dropdown dropdown-end lg:hidden">
-                        <label tabindex="0" class="btn btn-ghost" onclick="toggleMobileMenu()">
+                    <div class="lg:hidden">
+                        <button class="btn btn-ghost" id="mobileMenuToggle">
                             <i class="fas fa-bars text-xl"></i>
-                        </label>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -187,9 +190,9 @@
                 <!-- Breadcrumb -->
                 <nav class="mb-4">
                     <ol class="flex items-center space-x-2 text-sm text-gray-200">
-                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/index.html" class="hover:text-white transition-colors">Home</a></li>
                         <li class="text-gray-400">/</li>
-                        <li><a href="#" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="/services.html" class="hover:text-white transition-colors">Services</a></li>
                         <li class="text-gray-400">/</li>
                         <li class="text-white font-medium">Web Development</li>
                     </ol>

@@ -30,7 +30,9 @@
     <meta property="twitter:image" content="https://onlinestaff.com/assets/images/about-og.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -52,7 +54,8 @@
                             <i class="fas fa-users text-white text-xl"></i>
                         </div>
                         <div>
-                            <h1 class="text-2xl font-bold text-secondary-color">Online Staff</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold text-secondary-color">Online Staff</h1>
+
                             <p class="text-xs text-gray-500">Future of Work</p>
                         </div>
                     </div>
@@ -63,18 +66,18 @@
                     <ul class="menu menu-horizontal px-1 text-base font-medium">
                         <li><a href="/" class="text-secondary-color hover:text-primary-color transition-colors">HOME</a>
                         </li>
-                        <li><a href="/about-us.html"
-                                class="text-secondary-color hover:text-primary-color transition-colors">ABOUT
+                        <li><a href="/about-us.html" class="active-link transition-colors">ABOUT
                                 US</a>
                         </li>
 
                         <!-- Services Dropdown -->
                         <li class="dropdown dropdown-hover">
-                            <a href="/services.html"
+                            <a href="/services.html" tabindex="0" role="button"
                                 class="text-secondary-color hover:text-primary-color transition-colors">
                                 SERVICES <i class="fas fa-chevron-down ml-1 text-xs"></i>
                             </a>
-                            <ul class="dropdown-content menu p-2 shadow-lg bg-white rounded-box w-64 mt-2">
+                            <ul tabindex="0"
+                                class="dropdown-content menu p-2 shadow-lg bg-white rounded-box w-64 mt-2 z-[1]">
                                 <li><a href="/services/virtual-assistant.html" class="hover:bg-gray-100">Virtual
                                         Assistant</a></li>
                                 <li><a href="/services/content-writers.html" class="hover:bg-gray-100">Content
@@ -106,10 +109,10 @@
                     </a>
 
                     <!-- Mobile Menu Button -->
-                    <div class="dropdown dropdown-end lg:hidden">
-                        <label tabindex="0" class="btn btn-ghost" onclick="toggleMobileMenu()">
+                    <div class="lg:hidden">
+                        <button class="btn btn-ghost" id="mobileMenuToggle">
                             <i class="fas fa-bars text-xl"></i>
-                        </label>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -273,7 +276,7 @@
                                     </div>
                                     <div>
                                         <div class="font-poppins font-semibold text-white text-sm">Online & Ready</div>
-                                        <div class="font-inter text-xs text-white/70">24/7 Available</div>
+                                        <div class="font-inter text-xs text-white opacity-80">24/7 Available</div>
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +284,7 @@
                             <div class="floating-element absolute -bottom-6 -left-6 p-6 rounded-2xl shadow-2xl">
                                 <div class="text-center">
                                     <div class="font-poppins font-bold text-2xl text-white mb-1">24/7</div>
-                                    <div class="font-inter text-white/80 text-sm">Support</div>
+                                    <div class="font-inter text-white opacity-80 text-sm">Support</div>
                                 </div>
                             </div>
 
@@ -332,7 +335,7 @@
                     <div class="relative">
                         <div class="relative overflow-hidden rounded-2xl">
                             <img src="https://images.unsplash.com/photo-1681569685378-3c18bf84b504?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Virtual team at work" class="w-full h-96 lg:h-[800px] object-cover">
+                                alt="Virtual team at work" class="w-full story_img h-96 object-cover">
                             <!-- Overlay -->
                             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
@@ -534,7 +537,7 @@
                             <div class="w-12 h-1 bg-accent-color mx-auto rounded-full"></div>
                         </div>
 
-                        <div class="space-y-3">
+                        <div>
                             <div class="value-item flex items-center space-x-3 p-2 rounded-lg">
                                 <div class="w-2 h-2 bg-accent-color rounded-full flex-shrink-0"></div>
                                 <span class="font-inter font-medium text-gray-700">Trust & Transparency</span>
@@ -1513,14 +1516,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-accent-color hover:bg-blue-600 text-white border-none font-semibold font-inter">
                                 Visit Website
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-accent-color text-accent-color hover:bg-accent-color hover:text-white font-semibold font-inter">
                                 View Code
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1573,14 +1576,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-accent-color hover:bg-blue-600 text-white border-none font-semibold font-inter">
                                 Visit Website
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-accent-color text-accent-color hover:bg-accent-color hover:text-white font-semibold font-inter">
                                 Case Study
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1647,14 +1650,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-purple-600 hover:bg-purple-700 text-white border-none font-semibold font-inter">
                                 View Campaign
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold font-inter">
                                 Results Report
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1721,14 +1724,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-green-600 hover:bg-green-700 text-white border-none font-semibold font-inter">
                                 Visit Store
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold font-inter">
                                 View Features
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1794,14 +1797,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-orange-600 hover:bg-orange-700 text-white border-none font-semibold font-inter">
                                 Visit Landing Page
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold font-inter">
                                 View Analytics
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1867,14 +1870,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-blue-600 hover:bg-blue-700 text-white border-none font-semibold font-inter">
                                 View Campaign
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold font-inter">
                                 Success Story
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1894,14 +1897,14 @@
                     Ready to Scale with
                     <span class="text-accent-color">Expert Virtual Support?</span>
                 </h2>
-        
+
                 <!-- Subheadline -->
                 <p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8 leading-relaxed">
                     Join hundreds of successful businesses who've transformed their operations with our dedicated
                     virtual teams.
                     Start your journey today with a free consultation.
                 </p>
-        
+
                 <!-- Benefits List -->
                 <div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-blue-100">
                     <div class="flex items-center gap-2">
@@ -1929,7 +1932,7 @@
                         <span class="font-medium">Money-Back Guarantee</span>
                     </div>
                 </div>
-        
+
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="/contact-us.html"
@@ -1941,7 +1944,7 @@
                         View Our Plans
                     </a>
                 </div>
-        
+
                 <!-- Trust Indicators -->
                 <div class="mt-16 pt-8 border-t border-blue-400 border-opacity-30">
                     <p class="text-white mb-6">Trusted by 500+ businesses worldwide</p>
@@ -1961,9 +1964,10 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Decorative Elements -->
-            <div class="absolute top-0 right-0 w-96 h-96 bg-accent-color rounded-full opacity-5 -translate-y-48 translate-x-48">
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-accent-color rounded-full opacity-5 -translate-y-48 translate-x-48">
             </div>
             <div
                 class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-color rounded-full opacity-5 translate-y-32 -translate-x-32">

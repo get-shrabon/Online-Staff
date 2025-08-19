@@ -1,16 +1,43 @@
 // ========================= Header JS =========================
 function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenu.classList.toggle('active');
+    if (mobileMenu) {
+        mobileMenu.classList.toggle('active');
+    }
 }
+
+// Mobile menu event listener
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+    }
+});
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', function (event) {
     const mobileMenu = document.getElementById('mobileMenu');
-    const menuButton = event.target.closest('.dropdown-end');
+    const menuButton = document.getElementById('mobileMenuToggle');
 
-    if (!menuButton && !mobileMenu.contains(event.target)) {
-        mobileMenu.classList.remove('active');
+    if (!menuButton?.contains(event.target) && !mobileMenu?.contains(event.target)) {
+        mobileMenu?.classList.remove('active');
+    }
+});
+
+// Services dropdown functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const servicesDropdown = document.querySelector('.dropdown-hover div[role="button"]');
+    if (servicesDropdown) {
+        servicesDropdown.addEventListener('click', function (e) {
+            e.preventDefault();
+            // Navigate to services page on click
+            window.location.href = '/services.html';
+        });
     }
 });
 

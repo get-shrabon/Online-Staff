@@ -30,7 +30,9 @@
     <meta property="twitter:image" content="https://onlinestaff.com/assets/images/projects-og.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -52,7 +54,8 @@
                             <i class="fas fa-users text-white text-xl"></i>
                         </div>
                         <div>
-                            <h1 class="text-2xl font-bold text-secondary-color">Online Staff</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold text-secondary-color">Online Staff</h1>
+
                             <p class="text-xs text-gray-500">Future of Work</p>
                         </div>
                     </div>
@@ -75,11 +78,15 @@
                                 SERVICES <i class="fas fa-chevron-down ml-1 text-xs"></i>
                             </a>
                             <ul class="dropdown-content menu p-2 shadow-lg bg-white rounded-box w-64 mt-2">
-                                <li><a href="#" class="hover:bg-gray-100">Virtual Assistants</a></li>
-                                <li><a href="#" class="hover:bg-gray-100">Content Writers</a></li>
-                                <li><a href="#" class="hover:bg-gray-100">Web Developers</a></li>
-                                <li><a href="#" class="hover:bg-gray-100">Digital Marketing</a></li>
-                                <li><a href="#" class="hover:bg-gray-100">Data Entry</a></li>
+                                <li><a href="/services/virtual-assistant.html" class="hover:bg-gray-100">Virtual
+                                        Assistants</a></li>
+                                <li><a href="/services/content-writers.html" class="hover:bg-gray-100">Content
+                                        Writers</a></li>
+                                <li><a href="/services/web-developers.html" class="hover:bg-gray-100">Web Developers</a>
+                                </li>
+                                <li><a href="/services/digital-marketing.html" class="hover:bg-gray-100">Digital
+                                        Marketing</a></li>
+                                <li><a href="/services/data-entry.html" class="hover:bg-gray-100">Data Entry</a></li>
                             </ul>
                         </li>
 
@@ -100,10 +107,10 @@
                     </a>
 
                     <!-- Mobile Menu Button -->
-                    <div class="dropdown dropdown-end lg:hidden">
-                        <label tabindex="0" class="btn btn-ghost" onclick="toggleMobileMenu()">
+                    <div class="lg:hidden">
+                        <button class="btn btn-ghost" id="mobileMenuToggle">
                             <i class="fas fa-bars text-xl"></i>
-                        </label>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -525,14 +532,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-accent-color hover:bg-blue-600 text-white border-none font-semibold font-inter">
                                 Visit Website
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-accent-color text-accent-color hover:bg-accent-color hover:text-white font-semibold font-inter">
                                 View Code
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -585,14 +592,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-accent-color hover:bg-blue-600 text-white border-none font-semibold font-inter">
                                 Visit Website
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-accent-color text-accent-color hover:bg-accent-color hover:text-white font-semibold font-inter">
                                 Case Study
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -659,14 +666,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-purple-600 hover:bg-purple-700 text-white border-none font-semibold font-inter">
                                 View Campaign
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold font-inter">
                                 Results Report
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -733,14 +740,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-green-600 hover:bg-green-700 text-white border-none font-semibold font-inter">
                                 Visit Store
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold font-inter">
                                 View Features
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -806,14 +813,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-orange-600 hover:bg-orange-700 text-white border-none font-semibold font-inter">
                                 Visit Landing Page
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold font-inter">
                                 View Analytics
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -879,14 +886,14 @@
                             </div>
                         </div>
                         <div class="flex space-x-4">
-                            <button
+                            <a href="#" target="_blank"
                                 class="btn bg-blue-600 hover:bg-blue-700 text-white border-none font-semibold font-inter">
                                 View Campaign
-                            </button>
-                            <button
+                            </a>
+                            <a href="#" target="_blank"
                                 class="btn btn-outline border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold font-inter">
                                 Success Story
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1042,14 +1049,14 @@
                     Ready to Scale with
                     <span class="text-accent-color">Expert Virtual Support?</span>
                 </h2>
-        
+
                 <!-- Subheadline -->
                 <p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8 leading-relaxed">
                     Join hundreds of successful businesses who've transformed their operations with our dedicated
                     virtual teams.
                     Start your journey today with a free consultation.
                 </p>
-        
+
                 <!-- Benefits List -->
                 <div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-blue-100">
                     <div class="flex items-center gap-2">
@@ -1077,7 +1084,7 @@
                         <span class="font-medium">Money-Back Guarantee</span>
                     </div>
                 </div>
-        
+
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="/contact-us.html"
@@ -1089,7 +1096,7 @@
                         View Our Plans
                     </a>
                 </div>
-        
+
                 <!-- Trust Indicators -->
                 <div class="mt-16 pt-8 border-t border-blue-400 border-opacity-30">
                     <p class="text-white mb-6">Trusted by 500+ businesses worldwide</p>
@@ -1109,9 +1116,10 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Decorative Elements -->
-            <div class="absolute top-0 right-0 w-96 h-96 bg-accent-color rounded-full opacity-5 -translate-y-48 translate-x-48">
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-accent-color rounded-full opacity-5 -translate-y-48 translate-x-48">
             </div>
             <div
                 class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-color rounded-full opacity-5 translate-y-32 -translate-x-32">
@@ -1141,14 +1149,14 @@
                         administrative tasks, we deliver excellence with trust.
                     </p>
                     <div class="mt-6 flex space-x-2">
-                        <button
-                            class="bg-accent-color text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors">
+                        <a href="/contact-us.html"
+                            class="bg-accent-color text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors text-center">
                             Get Quote
-                        </button>
-                        <button
-                            class="border border-gray-600 text-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:border-accent-color hover:text-accent-color transition-colors">
+                        </a>
+                        <a href="/contact-us.html"
+                            class="border border-gray-600 text-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:border-accent-color hover:text-accent-color transition-colors text-center">
                             Free Audit
-                        </button>
+                        </a>
                     </div>
                 </div>
 
